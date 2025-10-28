@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Fira Code", monospace;
+  }
+
+@font-face {
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    src: url(./assets/fonts/FiraCode-VariableFont_wght.ttf);
+} 
+
+@font-face {
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    src: url(./assets/fonts/Karla-VariableFont_wght.ttf);
+} 
+
+.fontKarla{
+    font-family: "Karla";
+}
