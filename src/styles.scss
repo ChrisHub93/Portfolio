@@ -2,7 +2,7 @@
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: "Fira Code", monospace;
+  font-family: "Karla",;
 }
 
 /* Fira Code Font */
@@ -23,6 +23,8 @@
   font-display: swap;
 }
 
-.fontKarla {
-  font-family: "Karla", sans-serif;
+.fontFira-code {
+  font-family: "Fira Code";
 }
+
+$aqua: #3DCFB6;
