@@ -1,12 +1,23 @@
 import { Component } from '@angular/core';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { AboutMeComponent } from './about-me/about-me.component';
+import { ContactComponent } from './contact/contact.component';
+import { FeaturedProjectsComponent } from './featured-projects/featured-projects.component';
+import { ReferencesComponent } from './references/references.component';
+import { SkillSetComponent } from './skill-set/skill-set.component';
 
 @Component({
   selector: 'app-main-content',
   standalone: true,
-  imports: [],
+  imports: [
+    LandingPageComponent,
+    AboutMeComponent,
+    ContactComponent,
+    FeaturedProjectsComponent,
+    ReferencesComponent,
+    SkillSetComponent,
+  ],
   templateUrl: './main-content.component.html',
-  styleUrl: './main-content.component.scss'
+  styleUrl: './main-content.component.scss',
 })
-export class MainContentComponent {
-
-}
+export class MainContentComponent {}
