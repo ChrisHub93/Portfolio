@@ -2,8 +2,8 @@
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: "Karla",;
-  color: #D9D9D9;
+  font-family: "Karla";
+  color: #d9d9d9;
 }
 
 /* Fira Code Font */
@@ -28,22 +28,26 @@
   font-family: "Fira Code";
 }
 
-$aqua: #3DCFB6;
+$aqua: #3dcfb6;
 
-.button{
-    display: flex;
-    align-items: center;
-    height: 48px;
-    background: none;
-    border: 1px solid #FFFFFF;
-    border-radius: 100px;
-    padding: 24px;
-    font-size: 18px;
-    text-align: center;
-    gap: 4px;
-    &:hover{
-        cursor: pointer;
-        border-color: $aqua;
-        color: $aqua;
-    }
+.button {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  background: none;
+  border: 1px solid #ffffff;
+  border-radius: 100px;
+  padding: 24px;
+  font-size: 18px;
+  text-align: center;
+  gap: 4px;
+  &:hover {
+    cursor: pointer;
+    border-color: $aqua;
+    color: $aqua;
+  }
+}
+
+a {
+  text-decoration: none;
 }

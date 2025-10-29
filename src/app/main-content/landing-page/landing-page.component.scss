@@ -56,7 +56,7 @@ section {
     width: 30px;
     border: 1px solid $aqua;
     border-radius: 32px;
-    
+
     > img {
       position: absolute;
       animation: arrow-movement 0.5s ease-in-out infinite alternate;
@@ -70,6 +70,41 @@ section {
     opacity: 0.5;
   }
 }
+
+.right-lateral {
+    position: absolute;
+    top: 62%;
+    bottom: 0;
+    right: 96px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 32px;
+
+    > a{
+        font-size: 18px;
+       transform: translateY(-100px) translateX(-4px) rotate(269deg);;
+        &:hover{
+            cursor: pointer;
+            color: $aqua;
+        }
+    }  
+
+    >img{
+        &:hover{
+            cursor: pointer;
+            filter: brightness(0) saturate(100%) invert(1);
+        }
+    }
+  
+    > .vector {
+      flex: 1;
+      width: 1px;
+      background-color: #FFFFFF;
+      opacity: 0.5;
+    }
+  }
 
 @keyframes arrow-movement {
   0% {
