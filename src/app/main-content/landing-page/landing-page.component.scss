@@ -113,7 +113,7 @@ section {
     width: 105%;
     height: 62px;
     transform: translateY(-65px) translateX(-65px) rotate(-5deg);
-    background-color: rgba(145, 140, 140, 0.886);
+    background-color: rgba(56, 56, 56, 0.886);
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -123,12 +123,17 @@ section {
       gap: 70px;
       white-space: nowrap;
       animation: marquee 15s linear infinite;
+      &:hover{
+        cursor: default;
+        animation-play-state: paused;
+    }
     }
   
     span {
       font-size: 32px;
       color: $aqua;
     }
+    
   }
   
   @keyframes marquee {
