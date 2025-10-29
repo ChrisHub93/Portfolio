@@ -29,3 +29,21 @@
 }
 
 $aqua: #3DCFB6;
+
+.button{
+    display: flex;
+    align-items: center;
+    height: 48px;
+    background: none;
+    border: 1px solid #FFFFFF;
+    border-radius: 100px;
+    padding: 24px;
+    font-size: 18px;
+    text-align: center;
+    gap: 4px;
+    &:hover{
+        cursor: pointer;
+        border-color: $aqua;
+        color: $aqua;
+    }
+}
