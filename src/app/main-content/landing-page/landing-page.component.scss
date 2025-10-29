@@ -1,34 +1,81 @@
-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100%;
-    background-image: url("./../../../assets/img/landing-page-background.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding-left: 32px;
+@import "./../../../styles.scss";
+
+section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background-image: url("./../../../assets/img/landing-page-background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-left: 32px;
 }
 
-.centered{
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2 {
+    font-family: "Fira Code";
+    font-size: 40px;
+    font-weight: 400;
+  }
+  h1 {
+    font-size: 128px;
+    font-weight: 700;
+    letter-spacing: -8px;
+  }
+  > .buttons {
+    margin-top: 32px;
     display: flex;
-    flex-direction: column;
+    gap: 48px;
+  }
+}
+
+.left-lateral {
+  position: absolute;
+  top: 62%;
+  bottom: 0;
+  left: 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 32px;
+
+  > .left-arrow-box {
+    position: relative;
+    display: flex;
     align-items: center;
-    h2{
-        font-family: "Fira Code";
-        font-size: 40px;
-        font-weight: 400;
+    justify-content: center;
+    height: 48px;
+    width: 30px;
+    border: 1px solid $aqua;
+    border-radius: 32px;
+    
+    > img {
+      position: absolute;
+      animation: arrow-movement 0.5s ease-in-out infinite alternate;
     }
-    h1{
-        font-size: 128px;
-        font-weight: 700;
-        letter-spacing: -8px;
-    }
-    >.buttons{
-        margin-top: 32px;
-        display: flex;
-        gap: 48px;
-    }
+  }
+
+  > .vector {
+    flex: 1;
+    width: 1px;
+    background-color: $aqua;
+    opacity: 0.5;
+  }
+}
+
+@keyframes arrow-movement {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
 }
