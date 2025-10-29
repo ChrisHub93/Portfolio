@@ -1,0 +1,65 @@
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  margin-left: 15px;
+  font-family: "Fira Code";
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: lighter;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  > .english_btn {
+    height: 28px;
+    width: 84px;
+    background: none;
+    border: unset;
+    background-image: url(./../../../../assets/icons/nav_button/english.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &:hover {
+        cursor: pointer;
+        background-image: url(./../../../../assets/icons/nav_button/english_hover.png);
+    }
+  }
+  > .german_btn {
+    height: 28px;
+    width: 84px;
+    background: none;
+    border: unset;
+    background-image: url(./../../../../assets/icons/nav_button/german.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &:hover{
+        cursor: pointer;
+        background-image: url(./../../../../assets/icons/nav_button/german_hover.png);
+    }
+  }
+}
+
+.logo{
+    height: 48px;
+    width: 132px;
+    background-image: url(./../../../../assets/icons/logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &:hover{
+        cursor: pointer;
+        background-image: url(./../../../../assets/icons/logo_hover.png);
+    }
+}

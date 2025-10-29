@@ -1,1 +1,15 @@
-<p>navbar works!</p>
+<nav>
+  <div class="menu">
+    @if(languageEnglish){
+    <button (click)="languageEnglish = false" class="english_btn"></button>
+    }@else{
+    <button (click)="languageEnglish = true" class="german_btn"></button>
+    }
+
+    <a href="">About me</a>
+    <a href="">Skills</a>
+    <a href="">Projects</a>
+  </div>
+  <div class="logo">
+  </div>
+</nav>
