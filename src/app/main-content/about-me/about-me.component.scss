@@ -12,11 +12,21 @@ section {
 }
 
 .image-container {
+  position: relative;
   width: 50%;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  > .profile {
+    transition: transform 0.5s ease; 
+    z-index: 2;
+    &:hover {
+      transform: scale(1.05) translateX(20px) translateY(-30px);
+
+    }
+  }
   > img {
+    position: absolute;
     width: 100%;
   }
 }
@@ -28,11 +38,44 @@ section {
   flex-direction: column;
 }
 
+.about-me-container__headline {
+  font-weight: 300;
+  color: $aqua;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
 .about-me {
   display: flex;
   flex-direction: column;
   padding: 32px;
-  background-color: rgb(61, 207, 182, 0.4);
+  background-color: rgb(61, 207, 182, 0.1);
   border: 1px solid $aqua;
   border-radius: 30px;
+  gap: 12px;
+  font-size: 18px;
+  >span{
+    margin-bottom: 16px;
+    margin-left: 16px;
+    color: #ffffff;
+
+  }
+  >div{
+    display: flex;
+    gap: 24px;
+    
+    >img{
+        width: 32px;
+        height: 32px;
+    }
+    >span{
+        color: rgb(255, 255, 255, 0.8);
+    }
+  }
+}
+
+.about-me__headline {
+    color: $aqua;
+    font-size: 64px;
+    font-weight: bold;
 }
