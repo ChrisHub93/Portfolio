@@ -8,7 +8,7 @@ section {
   padding: 102px 96px;
   justify-content: space-between;
   align-items: stretch;
-  gap: 15%;
+  gap: 8%;
 }
 
 .image-container {
@@ -18,11 +18,10 @@ section {
   align-items: flex-start;
   justify-content: flex-start;
   > .profile {
-    transition: transform 0.5s ease; 
+    transition: transform 0.5s ease;
     z-index: 2;
     &:hover {
       transform: scale(1.05) translateX(20px) translateY(-30px);
-
     }
   }
   > img {
@@ -54,28 +53,28 @@ section {
   border-radius: 30px;
   gap: 12px;
   font-size: 18px;
-  >span{
+  > span {
     margin-bottom: 16px;
     margin-left: 16px;
     color: #ffffff;
-
   }
-  >div{
+  > div {
     display: flex;
     gap: 24px;
-    
-    >img{
-        width: 32px;
-        height: 32px;
+
+    > img {
+      width: 32px;
+      height: 32px;
     }
-    >span{
-        color: rgb(255, 255, 255, 0.8);
+    > span {
+      color: rgb(255, 255, 255, 0.8);
     }
   }
 }
 
 .about-me__headline {
-    color: $aqua;
-    font-size: 64px;
-    font-weight: bold;
+  color: $aqua;
+  font-size: 64px;
+  font-weight: bold;
+  letter-spacing: -6px;
 }
