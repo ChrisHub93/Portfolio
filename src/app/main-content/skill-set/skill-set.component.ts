@@ -17,7 +17,7 @@ export class SkillSetComponent {
     'Angular',
     'Firebase',
     'Git',
-    'Rest-Api',
+    'REST-API',
     'Scrum',
   ];
 }
