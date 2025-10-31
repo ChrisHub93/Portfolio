@@ -47,10 +47,6 @@ section {
 .about-me {
   display: flex;
   flex-direction: column;
-  padding: 32px;
-  background-color: rgb(61, 207, 182, 0.1);
-  border: 1px solid $aqua;
-  border-radius: 30px;
   gap: 12px;
   font-size: 18px;
   > span {

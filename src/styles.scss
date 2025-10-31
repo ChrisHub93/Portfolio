@@ -35,6 +35,7 @@ $backgroundDark: #1c1c1c;
   display: flex;
   align-items: center;
   height: 48px;
+  width: fit-content;
   background: none;
   border: 1px solid #ffffff;
   border-radius: 100px;
@@ -51,4 +52,11 @@ $backgroundDark: #1c1c1c;
 
 a {
   text-decoration: none;
+}
+
+.text-frame {
+  background-color: rgb(61, 207, 182, 0.1);
+  border: 1px solid $aqua;
+  border-radius: 30px;
+  padding: 32px;
 }
