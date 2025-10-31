@@ -1,10 +1,12 @@
 @import "./../../../styles.scss";
 
 section {
-    background: $aqua;
-  background-image:
-    linear-gradient(90deg,rgba(61, 207, 182, 0%) -52%, rgba(28, 28, 28, 1) 18%)
-    ,
+  background: $aqua;
+  background-image: linear-gradient(
+      90deg,
+      rgba(61, 207, 182, 0%) -52%,
+      rgba(28, 28, 28, 1) 18%
+    ),
     url("./../../../assets/img/skill-set-background.png");
   background-size: cover;
   background-position: center;
@@ -73,5 +75,24 @@ section {
     > span {
       text-align: center;
     }
+  }
+}
+
+.growth-icon {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 68px;
+  &:hover {
+    cursor: default;
+    scale: 1.08;
+  }
+  > img {
+    height: 64px;
+  }
+  > span {
+    text-align: center;
   }
 }
