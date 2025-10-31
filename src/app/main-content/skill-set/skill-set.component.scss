@@ -33,6 +33,21 @@ section {
   height: 800px;
   width: 50%;
   display: flex;
-  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
   background-color: orange;
+
+  > .icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 68px;
+    > img {
+      height: 64px;
+    }
+    > span {
+      text-align: center;
+    }
+  }
 }
