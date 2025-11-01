@@ -89,7 +89,14 @@ section {
   }
 }
 
-.projects-container .project-join:hover ~ .project-images-container .join-img {
-  display: block;
+.project-images-container .preview-img {
+  display: flex;
+  width: 315px;
+  height: 212px;
+  object-fit: cover;
 }
 
+.pollo-img{
+  align-self: center;
+  justify-self: center;
+}
