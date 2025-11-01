@@ -77,7 +77,11 @@
       </div>
     </div>
 
-    <div class="project-images-container">
+    <div class="project-images-container"
+     [ngClass]="{
+       'center': showPolloImg,
+       'end': showBubbleImg
+     }">
       @if(showJoinImg){
       <img
         class="join-img"

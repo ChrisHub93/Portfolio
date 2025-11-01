@@ -39,7 +39,7 @@ section {
   align-items: center;
 
   > img {
-        height: 212px;
+    height: 212px;
     width: 315px;
   }
 }
@@ -83,18 +83,14 @@ section {
     background-color: rgb(61, 207, 182, 0.1);
     .arrow_outward-icon {
       display: block !important;
-      
     }
   }
 }
 
-.project-images-container .preview-img {
-  display: flex;
-  width: 100%;
-  object-fit: cover;
+.project-images-container.center {
+  justify-content: center;
 }
 
-.pollo-img{
-  align-self: center;
-  justify-self: center;
+.project-images-container.end {
+  justify-content: flex-end;
 }
