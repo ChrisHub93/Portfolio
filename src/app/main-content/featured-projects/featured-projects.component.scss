@@ -39,8 +39,7 @@ section {
   align-items: center;
 
   > img {
-    display: none;
-    height: 212px;
+        height: 212px;
     width: 315px;
   }
 }
@@ -91,8 +90,7 @@ section {
 
 .project-images-container .preview-img {
   display: flex;
-  width: 315px;
-  height: 212px;
+  width: 100%;
   object-fit: cover;
 }
 
