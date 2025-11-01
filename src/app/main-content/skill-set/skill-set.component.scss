@@ -79,20 +79,59 @@ section {
 }
 
 .growth-icon {
+  position: relative;
   margin-top: 32px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 68px;
-  &:hover {
-    cursor: default;
-    scale: 1.08;
-  }
+  cursor: pointer;
   > img {
     height: 64px;
   }
   > span {
     text-align: center;
+  }
+
+  /* Tooltip */
+  &::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%; /* erscheint oberhalb des Icons */
+    left: 50%;
+    transform: translateX(-50%) translateY(-6px);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-12px);
+  }
+
+  /* Optional: kleiner Pfeil unter dem Tooltip */
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(2px);
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover::before {
+    opacity: 1;
   }
 }
