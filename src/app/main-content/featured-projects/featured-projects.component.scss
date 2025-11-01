@@ -1,0 +1,71 @@
+@import "./../../../styles.scss";
+
+section {
+  background-color: $backgroundDark;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 102px 96px;
+  gap: 20px;
+}
+
+.section-name {
+  color: $aqua;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.portfolio-headline {
+  color: $aqua;
+  font-size: 64px;
+  font-weight: bold;
+  letter-spacing: -6px;
+}
+
+.project-box {
+  display: flex;
+}
+
+.projects-container {
+  width: 65%;
+  //background-color: orange;
+}
+
+.project-image {
+  width: 35%;
+  //background-color: $aqua;
+  height: 500px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  > .line {
+    border: 1px solid $aqua;
+    height: 1px;
+    width: 100%;
+  }
+  > .project-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 32px;
+    > .project-name {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    >.prject-skills{
+      display: flex;
+      gap: 5px;
+      font-size: 18px;
+      :nth-child(even) {
+        color: $aqua;
+      }
+    }
+  }
+  &:hover{
+    cursor: pointer;
+    background-color: rgb(61, 207, 182, 0.1);
+  }
+}
