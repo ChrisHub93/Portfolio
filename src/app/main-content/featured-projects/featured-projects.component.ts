@@ -14,21 +14,33 @@ export class FeaturedProjectsComponent {
   showElPolloLocoImg = false;
   showDABubbleImg = false;
   projectInfoOpen = true;
+  // selectedProject: any = null; -> Original
+  selectedProject: any =  {
+    'id' :'01',
+    'name': 'Join',
+    'skills': ['TypeScript', 'HTML', 'CSS', 'Firebase'],
+    'description':
+      'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
+  }; // -> Test für Project Info Overlay
+
 
   projects = [
     {
+      id :'01',
       name: 'Join',
       skills: ['TypeScript', 'HTML', 'CSS', 'Firebase'],
       description:
         'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
     },
     {
+      id :'02',
       name: 'El Pollo Loco',
       skills: ['HTML', 'CSS', 'JavaScript'],
       description:
         'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen. ',
     },
     {
+      id :'03',
       name: 'DA Bubble',
       skills: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
       description:
@@ -36,7 +48,7 @@ export class FeaturedProjectsComponent {
     },
   ];
 
-  selectedProject: any = null;
+
 
   openProjectInfo(project: any) {
     this.selectedProject = project;
