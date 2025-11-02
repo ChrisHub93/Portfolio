@@ -5,6 +5,18 @@
     Explore a selection of my work here - Interact with <br />
     projects to see my skills in action.
   </span>
+
+  <div
+    class="projetc-info"
+    [ngClass]="{
+      'info-open': projectInfoOpen,
+      'info-closed': !projectInfoOpen
+    }"
+  >
+    <div>
+      <app-project-info></app-project-info>
+    </div>
+  </div>
   <div class="project-box">
     <div class="projects-container">
       @for (project of projects; track $index) {

@@ -1,17 +1,19 @@
 import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
+import { ProjectInfoComponent } from "./project-info/project-info.component";
 
 @Component({
   selector: 'app-featured-projects',
   standalone: true,
   templateUrl: './featured-projects.component.html',
   styleUrl: './featured-projects.component.scss',
-  imports: [NgClass],
+  imports: [NgClass, ProjectInfoComponent],
 })
 export class FeaturedProjectsComponent {
   showJoinImg = false;
   showElPolloLocoImg = false;
   showDABubbleImg = false;
+  projectInfoOpen = true;
 
   projects = [
     {

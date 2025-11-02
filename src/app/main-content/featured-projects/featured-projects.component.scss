@@ -94,3 +94,10 @@ section {
 .project-images-container.end {
   justify-content: flex-end;
 }
+
+.info-open{
+  display: flex;
+}
+.info-closed{
+  display: none;
+}
