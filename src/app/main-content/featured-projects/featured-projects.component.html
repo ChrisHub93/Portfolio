@@ -7,15 +7,16 @@
   </span>
   <div class="project-box">
     <div class="projects-container">
+      @for (project of projects; track $index) {
       <div
-        (mouseenter)="showJoinImg = true"
-        (mouseleave)="showJoinImg = false"
+        (mouseenter)="showImage(project.name)"
+        (mouseleave)="hideImage(project.name)"
         class="project"
       >
         <div class="line"></div>
         <div class="project-info">
           <div>
-            <span class="project-name">Join</span>
+            <span class="project-name">{{ project.name }}</span>
             <img
               class="arrow_outward-icon"
               src="assets/icons/arrow_outward.png"
@@ -24,76 +25,36 @@
           </div>
 
           <div class="prject-skills">
-            <span>JavaScript</span> <span>|</span><span>HTML</span>
-            <span>|</span><span>CSS</span> <span>|</span><span>Firebase</span>
+            @for (skill of project.skills; track $index) {
+            <span>{{ skill }}</span>
+            @if(!$last){
+            <span>|</span>
+            } }
           </div>
         </div>
       </div>
-
-      <div
-        (mouseenter)="showPolloImg = true"
-        (mouseleave)="showPolloImg = false"
-        class="project"
-      >
-        <div class="line"></div>
-        <div class="project-info">
-          <div>
-            <span class="project-name">El Pollo Loco</span>
-            <img
-              class="arrow_outward-icon"
-              src="assets/icons/arrow_outward.png"
-              alt="Arrow outward"
-            />
-          </div>
-          <div class="prject-skills">
-            <span>JavaScript</span> <span>|</span><span>HTML</span>
-            <span>|</span><span>CSS</span>
-          </div>
-        </div>
-      </div>
-
-      <div
-        (mouseenter)="showBubbleImg = true"
-        (mouseleave)="showBubbleImg = false"
-        class="project"
-      >
-        <div class="line"></div>
-        <div class="project-info">
-          <div>
-            <span class="project-name">DA Bubble</span>
-            <img
-              class="arrow_outward-icon"
-              src="assets/icons/arrow_outward.png"
-              alt="Arrow outward"
-            />
-          </div>
-          <div class="prject-skills">
-            <span>Angular</span> <span>|</span><span>TypeScript</span>
-            <span>|</span><span>HTML</span> <span>|</span><span>CSS</span
-            ><span>|</span><span>Firebase</span>
-          </div>
-        </div>
-        <div class="line"></div>
-      </div>
+      }
     </div>
 
-    <div class="project-images-container"
-     [ngClass]="{
-       'center': showPolloImg,
-       'end': showBubbleImg
-     }">
+    <div
+      class="project-images-container"
+      [ngClass]="{
+        center: showElPolloLocoImg,
+        end: showDABubbleImg
+      }"
+    >
       @if(showJoinImg){
       <img
         class="join-img"
         src="assets/img/featured_projects/join.png"
         alt=""
       />
-      } @if(showPolloImg){
+      } @if(showElPolloLocoImg){
       <img
         class="pollo-img"
         src="assets/img/featured_projects/el_pollo_loco.png"
         alt=""
-      />} @if(showBubbleImg){
+      />} @if(showDABubbleImg){
       <img
         class="bubble-img"
         src="assets/img/featured_projects/da_bubble.png"
