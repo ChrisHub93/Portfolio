@@ -32,9 +32,19 @@ export class FeaturedProjectsComponent {
       name: 'DA Bubble',
       skills: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
       description:
-        'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen. ',
+        'This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
     },
   ];
+
+  selectedProject: any = null;
+
+  openProjectInfo(project: any) {
+    this.selectedProject = project;
+  }
+
+  closeProjectInfo() {
+    this.selectedProject = null;
+  }
 
   showImage(name: string) {
     this.resetImages();

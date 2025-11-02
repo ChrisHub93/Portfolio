@@ -6,21 +6,13 @@
     projects to see my skills in action.
   </span>
 
-  <div
-    class="projetc-info"
-    [ngClass]="{
-      'info-open': projectInfoOpen,
-      'info-closed': !projectInfoOpen
-    }"
-  >
-    <div>
-      <app-project-info></app-project-info>
-    </div>
-  </div>
   <div class="project-box">
     <div class="projects-container">
       @for (project of projects; track $index) {
+
+      <!-- Liste mit Projecten -->
       <div
+        (click)="openProjectInfo(project)"
         (mouseenter)="showImage(project.name)"
         (mouseleave)="hideImage(project.name)"
         class="project"
@@ -45,6 +37,18 @@
           </div>
         </div>
       </div>
+      }
+      <!-- Overlay mit Info -->
+      @if (selectedProject) {
+      <div class="project-info-overlay" (click)="closeProjectInfo()">
+        <div class="info-board" (click)="$event.stopPropagation()">
+          <app-project-info
+            [project]="selectedProject"
+            (close)="closeProjectInfo()"
+          ></app-project-info>
+        </div>
+      </div>
+
       }
     </div>
 
