@@ -41,14 +41,11 @@
       <!-- Overlay mit Info -->
       @if (selectedProject) {
       <div class="project-info-overlay" (click)="closeProjectInfo()">
-        <div class="info-board" (click)="$event.stopPropagation()">
-          <app-project-info
-            [project]="selectedProject"
-            (close)="closeProjectInfo()"
-          ></app-project-info>
-        </div>
+        <app-project-info
+          [project]="selectedProject"
+          (close)="closeProjectInfo()"
+        ></app-project-info>
       </div>
-
       }
     </div>
 
