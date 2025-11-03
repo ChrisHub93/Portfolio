@@ -47,10 +47,11 @@ section {
   }
 }
 
-.left-right-side-container{
+.left-right-side-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 48px;
 }
 
 .left-side {
@@ -58,17 +59,20 @@ section {
   flex-direction: column;
   width: 50%;
   gap: 32px;
-  > h1 {
-    font-size: 128px;
-    font-weight: bold;
-    color: $aqua;
-    letter-spacing: -2px;
+  > .headlines {
+    > h1 {
+      font-size: 128px;
+      font-weight: bold;
+      color: $aqua;
+      letter-spacing: -2px;
+    }
+    > h2 {
+      font-size: 64px;
+      font-weight: bold;
+      letter-spacing: -3px;
+    }
   }
-  > h2 {
-    font-size: 64px;
-    font-weight: bold;
-    letter-spacing: -3px;
-  }
+
   > span {
     font-size: 24px;
     font-weight: bold;
@@ -85,6 +89,14 @@ section {
         color: $aqua;
       }
     }
+  }
+}
+
+.right-side {
+  width: 50%;
+  > img {
+    width: 100%;
+    height: fit-content;
   }
 }
 

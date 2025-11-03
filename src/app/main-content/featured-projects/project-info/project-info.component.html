@@ -3,8 +3,11 @@
     <button class="button-close" (click)="closeInfo()"></button>
     <div class="left-right-side-container">
       <div class="left-side">
-        <h1>{{ project.id }}</h1>
-        <h2>{{ project.name }}</h2>
+        <div class="headlines">
+          <h1>{{ project.id }}</h1>
+          <h2>{{ project.name }}</h2>
+        </div>
+    
         <span>What is this project about?</span>
         <p>{{ project.description }}</p>
   
