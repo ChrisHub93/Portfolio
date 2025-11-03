@@ -14,7 +14,7 @@
       <div
         (click)="openProjectInfo(project)"
         (mouseenter)="showImage(project.name)"
-        (mouseleave)="hideImage(project.name)"
+        (mouseleave)="hideImage()"
         class="project"
       >
         <div class="line"></div>
@@ -56,7 +56,7 @@
       class="project-images-container"
       [ngClass]="{
         center: showElPolloLocoImg,
-        end: showDABubbleImg
+        end: showDABubbleImg,
       }"
     >
       @if(showJoinImg){

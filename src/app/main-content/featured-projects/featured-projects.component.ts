@@ -13,15 +13,15 @@ export class FeaturedProjectsComponent {
   showJoinImg = false;
   showElPolloLocoImg = false;
   showDABubbleImg = false;
-  projectInfoOpen = true;
-  // selectedProject: any = null; -> Original
-  selectedProject: any =  {
-    'id' :'01',
-    'name': 'Join',
-    'skills': ['TypeScript', 'HTML', 'CSS', 'Firebase'],
-    'description':
-      'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
-  }; // -> Test für Project Info Overlay
+  projectInfoOpen = false;
+  selectedProject: any = null; //-> Original
+  // selectedProject: any =  {
+  //   'id' :'01',
+  //   'name': 'Join',
+  //   'skills': ['TypeScript', 'HTML', 'CSS', 'Firebase'],
+  //   'description':
+  //     'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
+  // }; // -> Test für Project Info Overlay
 
 
   projects = [
@@ -64,8 +64,8 @@ export class FeaturedProjectsComponent {
     (this as any)[key] = true;
   }
 
-  hideImage(name: string) {
-    (this as any)[`show${name}Img`] = false;
+  hideImage() {
+    this.resetImages();
   }
 
   private resetImages() {
