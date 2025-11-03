@@ -7,6 +7,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 96px;
 }
 
 .info-board {
@@ -23,13 +24,12 @@ section {
   gap: 20px;
   border: 1px solid $aqua;
   border-radius: 30px;
-  padding: 32px;
+  padding: 32px 64px;
 }
 
 .button-close {
   display: flex;
   align-self: flex-end;
-  align-items: center;
   height: 48px;
   width: fit-content;
   background: none;
@@ -45,6 +45,12 @@ section {
     cursor: pointer;
     background-image: url(./../../../../assets/icons/project-info/close_hover.png);
   }
+}
+
+.left-right-side-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .left-side {
