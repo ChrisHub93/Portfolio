@@ -67,13 +67,15 @@ section {
       letter-spacing: -2px;
     }
     > h2 {
+      margin-top: -8px;
+      font-family: "Fira Code";
       font-size: 64px;
       font-weight: bold;
-      letter-spacing: -3px;
     }
   }
 
   > span {
+    font-family: "Fira Code";
     font-size: 24px;
     font-weight: bold;
     color: $aqua;
