@@ -43,6 +43,7 @@
       <div class="project-info-overlay" (click)="closeProjectInfo()">
         <app-project-info
           [project]="selectedProject"
+          [projects]="projects"
           (close)="closeProjectInfo()"
         ></app-project-info>
       </div>

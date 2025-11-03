@@ -14,16 +14,7 @@ export class FeaturedProjectsComponent {
   showElPolloLocoImg = false;
   showDABubbleImg = false;
   projectInfoOpen = false;
-  // selectedProject: any = null; //-> Original
-  selectedProject: any =  {
-    'id' :'01',
-    'name': 'Join',
-    'skills': ['TypeScript', 'HTML', 'CSS', 'Firebase'],
-    'description':
-      'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
-  }; // -> Test für Project Info Overlay
-
-
+  selectedProject: any = null; 
   projects = [
     {
       id :'01',
@@ -47,8 +38,6 @@ export class FeaturedProjectsComponent {
         'This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
     },
   ];
-
-
 
   openProjectInfo(project: any) {
     this.selectedProject = project;
