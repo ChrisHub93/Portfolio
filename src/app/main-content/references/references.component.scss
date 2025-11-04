@@ -7,7 +7,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 102px 96px;
+  padding: 102px 0;
   gap: 20px;
 }
 
@@ -17,19 +17,9 @@ h1 {
   font-weight: bold;
 }
 
-.comment-active {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 632px;
-  height: 274px;
-  font-size: 20px;
-  font-weight: 400;
-  > .autor-section {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
+.comments-container {
+  width: 100%;
+  overflow-x: scroll;
 }
 
 .vector {
@@ -43,19 +33,41 @@ h1 {
   display: flex;
   gap: 64px;
   align-items: center;
+  > .comment-active {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 632px;
+    min-width: 632px;
+    height: 274px;
+    font-size: 20px;
+    font-weight: 400;
+    > .autor-section {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+  }
+
+  > .comment-passive {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 632px;
+    min-width: 632px;
+    height: 248px;
+    font-size: 20px;
+    font-weight: 400;
+    > .autor-section {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+  }
 }
 
-.comment-passive {
+.scroll-container {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 632px;
-  height: 248px;
-  font-size: 20px;
-  font-weight: 400;
-  > .autor-section {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
+  align-items: center;
+  justify-content: center;
 }
