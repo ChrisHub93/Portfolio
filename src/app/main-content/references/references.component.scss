@@ -1,0 +1,61 @@
+@import "./../../../styles.scss";
+
+section {
+  background-color: $backgroundDark;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 102px 96px;
+  gap: 20px;
+}
+
+h1 {
+  color: $aqua;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.comment-active {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 632px;
+  height: 274px;
+  font-size: 20px;
+  font-weight: 400;
+  > .autor-section {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+.vector {
+  flex: 1;
+  height: 1px;
+  background-color: white;
+  opacity: 0.5;
+}
+
+.comment-section {
+  display: flex;
+  gap: 64px;
+  align-items: center;
+}
+
+.comment-passive {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 632px;
+  height: 248px;
+  font-size: 20px;
+  font-weight: 400;
+  > .autor-section {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+}
