@@ -37,6 +37,7 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     width: 632px;
     min-width: 632px;
     height: 274px;
@@ -70,4 +71,23 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 20px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.points {
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+  > a {
+    height: 8px;
+    width: 8px;
+  }
+  > .point-inactive {
+    background-image: url("./../../../assets/icons/point_white.png");
+  }
+  > .point-active {
+    background-image: url("./../../../assets/icons/point_aqua.png");
+  }
 }

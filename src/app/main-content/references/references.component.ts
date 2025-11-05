@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChildren, QueryList, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-references',
@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
   templateUrl: './references.component.html',
   styleUrl: './references.component.scss',
 })
-export class ReferencesComponent {
+export class ReferencesComponent implements AfterViewInit{
+  @ViewChildren('commentItem') commentItems!: QueryList<HTMLElement>;
   currentID:number = 2;
   references = [
     {
@@ -39,4 +40,19 @@ export class ReferencesComponent {
         'Our project benefited enormously from Simon efficient way of working.',
     },
   ];
+
+  ngAfterViewInit() {
+    this.scrollActiveIntoView();
+  }
+  scrollActiveIntoView() {
+    const activeIndex = this.references.findIndex(r => r.active);
+    const activeElement = this.commentItems.toArray()[activeIndex];
+
+    activeElement?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+  }
+
+  setActive(id: string) {
+    this.references.forEach(ref => ref.active = ref.id === id);
+    this.scrollActiveIntoView();
+  }
 }

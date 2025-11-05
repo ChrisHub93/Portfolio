@@ -2,39 +2,35 @@
   <h1 class="fontFira-code">What my colleagues say about me</h1>
   <div class="comments-container">
     <div class="comment-section">
-      @for (comment of references; track $index) { @if (comment.active) {
-      <div class="comment-active text-frame">
-        <span>
-          {{ comment.comment }}
-        </span>
+      @for (comment of references; track $index) {
+      <div
+        #commentItem
+        [id]="comment.id"
+        [class.comment-active]="comment.active"
+        [class.comment-passive]="!comment.active"
+        class="text-frame"
+      >
+        <span>{{ comment.comment }}</span>
         <div class="autor-section">
           <div class="vector"></div>
           <div class="comment-autor">{{ comment.autor }}</div>
         </div>
       </div>
-      } @else {
-      <div class="comment-passive text-frame">
-        <span>
-          {{ comment.comment }}
-        </span>
-        <div class="autor-section">
-          <div class="vector"></div>
-          <div class="comment-autor">{{ comment.autor }}</div>
-        </div>
-      </div>
-      } }
+      }
     </div>
-    <div class="scroll-container">
-      <img src="assets/icons/arrow_back.png" alt="Arrow_back" />
-      <div class="points">
-        <!-- Hier werden die punkte automatisch generiert @for mit href, wird automatisch gescrollt -->
-        <a href=""></a>
-        <a href=""></a>
-      </div>
-      <img
-        src="assets/icons/arrow_forward_white.png"
-        alt="Arrow_forward_white"
-      />
-    </div>
+  </div>
+  <div class="scroll-container">
+    <img src="assets/icons/arrow_back.png" alt="Arrow_back" />
+    <nav class="points">
+      @for (point of references; track $index) {
+      <a
+        [class.point-active]="point.active"
+        [class.point-inactive]="!point.active"
+        (click)="setActive(point.id)"
+      ></a>
+      }
+    </nav>
+
+    <img src="assets/icons/arrow_forward_white.png" alt="Arrow_forward_white" />
   </div>
 </section>
