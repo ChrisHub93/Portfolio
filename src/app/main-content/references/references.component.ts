@@ -1,4 +1,10 @@
-import { Component, ViewChildren, QueryList, ElementRef } from '@angular/core';
+import {
+  Component,
+  ViewChild,
+  ViewChildren,
+  QueryList,
+  ElementRef,
+} from '@angular/core';
 
 @Component({
   selector: 'app-references',
@@ -8,8 +14,6 @@ import { Component, ViewChildren, QueryList, ElementRef } from '@angular/core';
   styleUrl: './references.component.scss',
 })
 export class ReferencesComponent {
-  @ViewChildren('commentItem') commentItems!: QueryList<ElementRef>;
-
   references = [
     {
       id: 'comment_1',
@@ -41,41 +45,35 @@ export class ReferencesComponent {
     },
   ];
 
-  scrollActiveIntoView() {
-    const activeIndex = this.references.findIndex((r) => r.active);
-    const activeEl = this.commentItems.toArray()[activeIndex]?.nativeElement;
-    activeEl?.scrollIntoView({ behavior: 'smooth', inline: 'center' });
-  }
-
   setActive(id: string) {
     this.references.forEach((ref) => (ref.active = ref.id === id));
   }
 
   next() {
-    const index = this.references.findIndex(r => r.active);
+    const index = this.references.findIndex((r) => r.active);
     this.references[index].active = false;
     this.references[(index + 1) % this.references.length].active = true;
-    this.scrollActiveIntoView();
   }
-  
+
   prev() {
-    const index = this.references.findIndex(r => r.active);
+    const index = this.references.findIndex((r) => r.active);
     this.references[index].active = false;
-    this.references[(index - 1 + this.references.length) % this.references.length].active = true;
-    this.scrollActiveIntoView();
-  }  
+    this.references[
+      (index - 1 + this.references.length) % this.references.length
+    ].active = true;
+  }
 
   get visibleReferences() {
-    const activeIndex = this.references.findIndex(r => r.active);
-  
-    const prevIndex = (activeIndex - 1 + this.references.length) % this.references.length;
+    const activeIndex = this.references.findIndex((r) => r.active);
+
+    const prevIndex =
+      (activeIndex - 1 + this.references.length) % this.references.length;
     const nextIndex = (activeIndex + 1) % this.references.length;
-  
+
     return [
       this.references[prevIndex],
       this.references[activeIndex],
-      this.references[nextIndex]
+      this.references[nextIndex],
     ];
   }
-  
 }
