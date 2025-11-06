@@ -34,6 +34,7 @@ h1 {
   gap: 64px;
   align-items: center;
   > .comment-active {
+    scroll-snap-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -74,6 +75,11 @@ h1 {
   gap: 20px;
   overflow-y: scroll;
   scroll-behavior: smooth;
+  >button{
+    cursor: pointer;
+    background-color: unset;
+    border: none;
+  }
 }
 
 .points {
