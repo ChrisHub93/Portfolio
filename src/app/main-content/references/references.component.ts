@@ -1,10 +1,4 @@
-import {
-  Component,
-  ViewChild,
-  ViewChildren,
-  QueryList,
-  ElementRef,
-} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-references',
@@ -50,24 +44,22 @@ export class ReferencesComponent {
   }
 
   next() {
-    const index = this.references.findIndex((r) => r.active);
+    const index = this.references.findIndex(r => r.active);
     this.references[index].active = false;
     this.references[(index + 1) % this.references.length].active = true;
   }
 
   prev() {
-    const index = this.references.findIndex((r) => r.active);
+    const index = this.references.findIndex(r => r.active);
     this.references[index].active = false;
-    this.references[
-      (index - 1 + this.references.length) % this.references.length
-    ].active = true;
+    this.references[(index - 1 + this.references.length) % this.references.length].active = true;
   }
 
+  // Sichtbare 3 Elemente: links, mittig (aktiv), rechts
   get visibleReferences() {
-    const activeIndex = this.references.findIndex((r) => r.active);
+    const activeIndex = this.references.findIndex(r => r.active);
 
-    const prevIndex =
-      (activeIndex - 1 + this.references.length) % this.references.length;
+    const prevIndex = (activeIndex - 1 + this.references.length) % this.references.length;
     const nextIndex = (activeIndex + 1) % this.references.length;
 
     return [
@@ -76,4 +68,5 @@ export class ReferencesComponent {
       this.references[nextIndex],
     ];
   }
+
 }

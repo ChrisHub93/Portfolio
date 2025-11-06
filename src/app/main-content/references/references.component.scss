@@ -20,8 +20,6 @@ h1 {
 .comments-container {
   width: 100%;
   overflow-x: hidden;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
 }
 
 .vector {
@@ -75,8 +73,6 @@ h1 {
   gap: 20px;
   width: 100%;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
 
   > button {
     cursor: pointer;
