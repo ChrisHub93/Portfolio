@@ -33,6 +33,7 @@ h1 {
   display: flex;
   gap: 64px;
   align-items: center;
+  justify-content: center;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   > div {

@@ -2,10 +2,9 @@
   <h1 class="fontFira-code">What my colleagues say about me</h1>
   <div class="comments-container">
     <div class="comment-section">
-      @for (comment of references; track $index) {
+      @for (comment of visibleReferences; track $index) {
       <div
-        #commentItem
-        [id]="comment.id"
+
         [class.comment-active]="comment.active"
         [class.comment-passive]="!comment.active"
         class="text-frame"
@@ -19,19 +18,17 @@
       }
     </div>
   </div>
-
-
   <div class="scroll-container">
     <button (click)="prev()">
       <img src="assets/icons/arrow_back.png" alt="Arrow_back" />
     </button>
     <nav class="points">
       @for (point of references; track $index) {
-      <a href="#{{point.id}}"
+      <a
+        href="#{{ point.id }}"
         [class.point-active]="point.active"
         [class.point-inactive]="!point.active"
         (click)="setActive(point.id)"
-
       ></a>
       }
     </nav>

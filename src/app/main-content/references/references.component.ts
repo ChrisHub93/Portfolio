@@ -10,7 +10,6 @@ import { Component, ViewChildren, QueryList, ElementRef } from '@angular/core';
 export class ReferencesComponent {
   @ViewChildren('commentItem') commentItems!: QueryList<ElementRef>;
 
-  currentID: number = 1;
   references = [
     {
       id: 'comment_1',
@@ -51,32 +50,32 @@ export class ReferencesComponent {
   setActive(id: string) {
     this.references.forEach((ref) => (ref.active = ref.id === id));
   }
-  
+
   next() {
-    const activeIndex = this.references.findIndex((r) => r.active);
-
-    if (activeIndex < this.references.length - 1) {
-      this.references[activeIndex].active = false;
-      this.references[activeIndex + 1].active = true;
-    } else {
-      this.references[activeIndex].active = false;
-      this.references[0].active = true;
-    }
-
+    const index = this.references.findIndex(r => r.active);
+    this.references[index].active = false;
+    this.references[(index + 1) % this.references.length].active = true;
     this.scrollActiveIntoView();
   }
-
+  
   prev() {
-    const activeIndex = this.references.findIndex((r) => r.active);
-
-    if (activeIndex > 0) {
-      this.references[activeIndex].active = false;
-      this.references[activeIndex - 1].active = true;
-    } else {
-      this.references[activeIndex].active = false;
-      this.references[this.references.length - 1].active = true;
-    }
-
+    const index = this.references.findIndex(r => r.active);
+    this.references[index].active = false;
+    this.references[(index - 1 + this.references.length) % this.references.length].active = true;
     this.scrollActiveIntoView();
+  }  
+
+  get visibleReferences() {
+    const activeIndex = this.references.findIndex(r => r.active);
+  
+    const prevIndex = (activeIndex - 1 + this.references.length) % this.references.length;
+    const nextIndex = (activeIndex + 1) % this.references.length;
+  
+    return [
+      this.references[prevIndex],
+      this.references[activeIndex],
+      this.references[nextIndex]
+    ];
   }
+  
 }
