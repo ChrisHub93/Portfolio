@@ -33,9 +33,9 @@ export class ReferencesComponent {
     {
       id: 'comment_4',
       active: false,
-      autor: 'T.Schulz - Frontend Developer',
+      autor: 'S.Schulz - Frontend Developer',
       comment:
-        'Our project benefited enormously from Simon efficient way of working.',
+        'Bla bla bla.',
     },
   ];
 

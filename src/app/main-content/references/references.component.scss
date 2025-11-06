@@ -50,6 +50,7 @@ h1 {
   display: flex;
   gap: 64px;
   justify-content: center;
+  align-items: center;
   > .comment-active {
     display: flex;
     flex-direction: column;
