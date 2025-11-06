@@ -19,7 +19,7 @@ h1 {
 
 .comments-container {
   width: 100%;
-  overflow-x: scroll;
+  overflow: hidden;
 }
 
 .vector {
@@ -33,6 +33,11 @@ h1 {
   display: flex;
   gap: 64px;
   align-items: center;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  > div {
+    scroll-snap-align: center;
+  }
   > .comment-active {
     scroll-snap-align: center;
     display: flex;
@@ -52,6 +57,7 @@ h1 {
   }
 
   > .comment-passive {
+    scroll-snap-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -73,9 +79,12 @@ h1 {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  overflow-y: scroll;
+  width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  >button{
+
+  > button {
     cursor: pointer;
     background-color: unset;
     border: none;

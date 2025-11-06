@@ -1,9 +1,4 @@
-import {
-  Component,
-  ViewChildren,
-  QueryList,
-  AfterViewInit,
-} from '@angular/core';
+import { Component, ViewChildren, QueryList, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-references',
@@ -13,6 +8,7 @@ import {
   styleUrl: './references.component.scss',
 })
 export class ReferencesComponent {
+  @ViewChildren('commentItem') commentItems!: QueryList<ElementRef>;
 
   currentID: number = 1;
   references = [
@@ -46,27 +42,41 @@ export class ReferencesComponent {
     },
   ];
 
+  scrollActiveIntoView() {
+    const activeIndex = this.references.findIndex((r) => r.active);
+    const activeEl = this.commentItems.toArray()[activeIndex]?.nativeElement;
+    activeEl?.scrollIntoView({ behavior: 'smooth', inline: 'center' });
+  }
+
   setActive(id: string) {
     this.references.forEach((ref) => (ref.active = ref.id === id));
   }
-
+  
   next() {
-    if (this.currentID < this.references.length - 1) {
-      this.currentID++;
+    const activeIndex = this.references.findIndex((r) => r.active);
+
+    if (activeIndex < this.references.length - 1) {
+      this.references[activeIndex].active = false;
+      this.references[activeIndex + 1].active = true;
+    } else {
+      this.references[activeIndex].active = false;
+      this.references[0].active = true;
     }
-    this.updateActive();
+
+    this.scrollActiveIntoView();
   }
 
   prev() {
-    if (this.currentID > 0) {
-      this.currentID--;
-    }
-    this.updateActive();
-  }
+    const activeIndex = this.references.findIndex((r) => r.active);
 
-  updateActive() {
-    this.references.forEach(
-      (r, index) => (r.active = index === this.currentID)
-    );
+    if (activeIndex > 0) {
+      this.references[activeIndex].active = false;
+      this.references[activeIndex - 1].active = true;
+    } else {
+      this.references[activeIndex].active = false;
+      this.references[this.references.length - 1].active = true;
+    }
+
+    this.scrollActiveIntoView();
   }
 }
