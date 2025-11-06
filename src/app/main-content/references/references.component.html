@@ -1,4 +1,5 @@
 <section>
+  <div class="vignette"></div>
   <h1 class="fontFira-code">What my colleagues say about me</h1>
   <div class="comments-container">
     <div class="comment-section">
@@ -18,9 +19,7 @@
     </div>
   </div>
   <div class="scroll-container">
-    <button (click)="prev()">
-      <img src="assets/icons/arrow_back.png" alt="Arrow_back" />
-    </button>
+    <button class="btn-prev" (click)="prev()"></button>
     <nav class="points">
       @for (point of references; track $index) {
       <a
@@ -31,11 +30,6 @@
       ></a>
       }
     </nav>
-    <button (click)="next()">
-      <img
-        src="assets/icons/arrow_forward_white.png"
-        alt="Arrow_forward_white"
-      />
-    </button>
+    <button class="btn-next" (click)="next()"></button>
   </div>
 </section>
