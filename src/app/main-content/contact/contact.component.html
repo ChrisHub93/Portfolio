@@ -13,17 +13,25 @@
     </div>
   </div>
 
-  <form class="right-side" (ngSubmit)="onSubmit()">
+  <form
+    class="right-side"
+    (ngSubmit)="onSubmit(contactForm)"
+    #contactForm="ngForm"
+  >
     <div class="input-box">
       <div class="line"></div>
       <div class="input">
         <h3>What's your name?</h3>
         <input
+          #name="ngModel"
           [(ngModel)]="contactData.name"
           type="text"
           placeholder="Your name goes here"
           name="name"
-        />
+          required
+        />@if (!name.valid && name.touched && !name.disabled) {
+        <span>Please enter your name</span>
+        }
       </div>
       <div class="line"></div>
     </div>
@@ -33,11 +41,17 @@
       <div class="input">
         <h3>What's your email?</h3>
         <input
+          #email="ngModel"
           [(ngModel)]="contactData.email"
           type="text"
           placeholder="youremail@email.com"
           name="email"
+          pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+          required
         />
+        @if (!email.valid && email.touched && !email.disabled) {
+        <span>Please enter your email</span>
+        }
       </div>
       <div class="line"></div>
     </div>
@@ -47,18 +61,24 @@
       <div class="input">
         <h3>How can I help you?</h3>
         <input
+          #message="ngModel"
           [(ngModel)]="contactData.message"
           type="text"
           placeholder="Hello Christian, I am interested in..."
           name="message"
+          minlength="4"
+          required
         />
+        @if (!message.valid && message.touched && !message.disabled) {
+        <span>Please enter a message</span>
+        }
       </div>
       <div class="line"></div>
     </div>
 
     <div class="checkbox">
       <label class="container-checkbox">
-        <input id="checkbox" type="checkbox" />
+        <input name="checkbox" id="checkbox" type="checkbox" required />
         <span class="checkmark"></span>
       </label>
 
@@ -68,6 +88,6 @@
       </div>
     </div>
 
-    <button type="submit" class="button">Say Hello ;)</button>
+    <button type="submit" value="Submit" class="button">Say Hello ;)</button>
   </form>
 </section>
