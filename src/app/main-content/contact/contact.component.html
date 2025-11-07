@@ -78,7 +78,14 @@
 
     <div class="checkbox">
       <label class="container-checkbox">
-        <input name="checkbox" id="checkbox" type="checkbox" required />
+        <input
+          #checkbox="ngModel"
+          [(ngModel)]="accepted"
+          name="checkbox"
+          id="checkbox"
+          type="checkbox"
+          required
+        />
         <span class="checkmark"></span>
       </label>
 
@@ -86,8 +93,15 @@
         <span>I've read the </span> <button>privacy policy</button>
         <span>and agree to the processing of my data as outlined.</span>
       </div>
+      @if (!checkbox.valid && checkbox.touched && !checkbox.disabled) {
+        <span>Please accept the policy</span>
+        }
     </div>
 
+    @if (name.valid) {
     <button type="submit" value="Submit" class="button">Say Hello ;)</button>
+    }@else {
+    <button class="button">Hello</button>
+    }
   </form>
 </section>

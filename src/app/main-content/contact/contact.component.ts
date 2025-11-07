@@ -13,6 +13,8 @@ export class ContactComponent {
 
 http = inject(HttpClient);
 
+accepted =false;
+
 contactData ={
   name: "",
   email: "",
@@ -20,11 +22,6 @@ contactData ={
 };
 
 mailTest = true;
-
-// onSubmit(ngForm: NgForm){
-//   if(ngForm.valid && ngForm.submitted)
-//   console.log(this.contactData);
-// }
 
 post = {
   endPoint: 'https://deineDomain.de/sendMail.php',
@@ -51,8 +48,9 @@ onSubmit(ngForm: NgForm) {
         complete: () => console.info('send post complete'),
       });
   } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
+    console.log(this.contactData);
     ngForm.resetForm();
+
   }
 }
 }
