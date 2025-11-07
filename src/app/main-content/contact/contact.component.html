@@ -30,7 +30,7 @@
           name="name"
           required
         />@if (!name.valid && name.touched && !name.disabled) {
-        <span>Please enter your name</span>
+        <span class="error-message">Oops! it seems your name is missing</span>
         }
       </div>
       <div class="line"></div>
@@ -50,7 +50,7 @@
           required
         />
         @if (!email.valid && email.touched && !email.disabled) {
-        <span>Please enter your email</span>
+        <span class="error-message">Hoppla! your email is required</span>
         }
       </div>
       <div class="line"></div>
@@ -70,7 +70,7 @@
           required
         />
         @if (!message.valid && message.touched && !message.disabled) {
-        <span>Please enter a message</span>
+        <span class="error-message">What do you need to develop?</span>
         }
       </div>
       <div class="line"></div>
@@ -94,14 +94,12 @@
         <span>and agree to the processing of my data as outlined.</span>
       </div>
       @if (!checkbox.valid && checkbox.touched && !checkbox.disabled) {
-        <span>Please accept the policy</span>
+        <span class="error-message">Please accept the policy</span>
         }
     </div>
 
-    @if (name.valid) {
-    <button type="submit" value="Submit" class="button">Say Hello ;)</button>
-    }@else {
-    <button class="button">Hello</button>
+    @if (name.valid && email.valid && message.valid && checkbox.valid) {
+    <button type="submit" value="Submit" class="submit-btn">Say Hello ;)</button>
     }
   </form>
 </section>

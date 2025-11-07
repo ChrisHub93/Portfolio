@@ -57,12 +57,21 @@ h3 {
       flex-direction: column;
       gap: 10px;
       padding: 32px;
+      position: relative;
+      :focus{
+        outline: none;
+      }
 
       > input {
         background-color: unset;
         border: none;
         color: white;
         font-size: 22px;
+      }
+      > .error-message {
+        position: absolute;
+        top: 112px;
+        color: red;
       }
     }
     > .line {
@@ -83,6 +92,7 @@ h3 {
   display: flex;
   align-items: center;
   gap: 8px;
+  position: relative;
 
   span {
     font-size: 15px;
@@ -100,6 +110,12 @@ h3 {
       color: white;
       box-shadow: inset 0 -1px 0 0 $aqua;
     }
+  }
+
+  > .error-message {
+    position: absolute;
+    top: 47px;
+    color: red;
   }
 }
 
@@ -134,7 +150,7 @@ h3 {
 
   > .checkmark {
     position: absolute;
-    top: 0;
+    top: -7px;
     left: 0;
     height: 24px;
     width: 24px;
@@ -159,5 +175,42 @@ h3 {
       border-width: 0 2px 2px 0;
       transform: rotate(45deg);
     }
+  }
+}
+
+
+.submit-btn {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  height: 48px;
+  width: fit-content;
+  background: none;
+  border: 1px solid $aqua;
+  border-radius: 100px;
+  padding: 24px;
+  font-size: 18px;
+  text-align: center;
+  gap: 4px;
+  transition: transform 0.3s ease;
+  animation: pop 0.8s ease-out;
+
+  &:hover {
+    cursor: pointer;
+    border-color: $aqua;
+    color: $aqua;
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
   }
 }
