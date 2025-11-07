@@ -12,12 +12,18 @@
       <p>Let’s talk!</p>
     </div>
   </div>
-  <div class="right-side">
+
+  <form class="right-side" (ngSubmit)="onSubmit()">
     <div class="input-box">
       <div class="line"></div>
       <div class="input">
         <h3>What's your name?</h3>
-        <input type="text" placeholder="Your name goes here" />
+        <input
+          [(ngModel)]="contactData.name"
+          type="text"
+          placeholder="Your name goes here"
+          name="name"
+        />
       </div>
       <div class="line"></div>
     </div>
@@ -26,7 +32,12 @@
       <div class="line"></div>
       <div class="input">
         <h3>What's your email?</h3>
-        <input type="text" placeholder="youremail@email.com" />
+        <input
+          [(ngModel)]="contactData.email"
+          type="text"
+          placeholder="youremail@email.com"
+          name="email"
+        />
       </div>
       <div class="line"></div>
     </div>
@@ -36,15 +47,16 @@
       <div class="input">
         <h3>How can I help you?</h3>
         <input
+          [(ngModel)]="contactData.message"
           type="text"
           placeholder="Hello Christian, I am interested in..."
+          name="message"
         />
       </div>
       <div class="line"></div>
     </div>
 
     <div class="checkbox">
-
       <label class="container-checkbox">
         <input id="checkbox" type="checkbox" />
         <span class="checkmark"></span>
@@ -56,6 +68,6 @@
       </div>
     </div>
 
-    <button class="button">Say Hello ;)</button>
-  </div>
+    <button type="submit" class="button">Say Hello ;)</button>
+  </form>
 </section>
