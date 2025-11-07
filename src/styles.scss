@@ -60,3 +60,16 @@ a {
   border-radius: 30px;
   padding: 32px;
 }
+
+.logo {
+  height: 48px;
+  width: 132px;
+  background-image: url("./assets/icons/logo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  &:hover {
+    cursor: pointer;
+    background-image: url("./assets/icons/logo_hover.png");
+  }
+}

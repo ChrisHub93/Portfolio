@@ -30,8 +30,8 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     &:hover {
-        cursor: pointer;
-        background-image: url(./../../../../assets/icons/nav_button/english_hover.png);
+      cursor: pointer;
+      background-image: url(./../../../../assets/icons/nav_button/english_hover.png);
     }
   }
   > .german_btn {
@@ -43,22 +43,9 @@ a {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    &:hover{
-        cursor: pointer;
-        background-image: url(./../../../../assets/icons/nav_button/german_hover.png);
+    &:hover {
+      cursor: pointer;
+      background-image: url(./../../../../assets/icons/nav_button/german_hover.png);
     }
   }
-}
-
-.logo{
-    height: 48px;
-    width: 132px;
-    background-image: url(./../../../../assets/icons/logo.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    &:hover{
-        cursor: pointer;
-        background-image: url(./../../../../assets/icons/logo_hover.png);
-    }
 }

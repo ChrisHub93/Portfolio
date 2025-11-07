@@ -1,0 +1,66 @@
+@import "./../../../../styles.scss";
+
+section {
+  background-color: $backgroundDark;
+  height: 126px;
+  width: 100%;
+  display: flex;
+  padding: 102px 96px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-side {
+  > .logo {
+    margin-bottom: 24px;
+  }
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.middle {
+  > .fontFira-code {
+    color: $aqua;
+  }
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+
+  > a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -16px; // Startposition (kannst du anpassen)
+      transform: translateY(-50%) translateX(-100px);
+      width: 8px;
+      height: 8px;
+      background-image: url("./../../../../assets/icons/point_aqua.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    &:hover {
+      color: $aqua;
+
+      &::after {
+        opacity: 1;
+        transform: translateY(-50%) translateX(-120px); // bewegt sich leicht nach rechts
+      }
+    }
+  }
+}
