@@ -2,11 +2,21 @@
   <div class="vignette"></div>
   <h1 class="fontFira-code">What my colleagues say about me</h1>
   <div class="comments-container">
-    <div class="comment-section">
-      @for (comment of references; track $index) {
+    <div
+      class="comment-section"
+      [class.transition-enabled]="transitionEnabled"
+      [style.transform]="
+        'translateX(calc(50% - ' +
+        commentWidth / 2 +
+        'px - ' +
+        displayIndex * (commentWidth + gap) +
+        'px))'
+      "
+    >
+      @for (comment of displayComments; track $index) {
       <div
-        [class.comment-active]="comment.active"
-        [class.comment-passive]="!comment.active"
+        [class.comment-active]="$index === displayIndex"
+        [class.comment-passive]="$index !== displayIndex"
         class="text-frame"
       >
         <span>{{ comment.comment }}</span>
@@ -19,17 +29,57 @@
     </div>
   </div>
   <div class="scroll-container">
-    <button class="btn-prev" (click)="prev()"></button>
+    <button
+      class="btn-prev"
+      (click)="prev()"
+      [disabled]="isTransitioning"
+      aria-label="Previous Comment"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M15 18l-6-6 6-6" />
+      </svg>
+    </button>
     <nav class="points">
-      @for (point of references; track $index) {
+      @for (point of references; track point.id) {
       <a
-        href="#{{ point.id }}"
         [class.point-active]="point.active"
         [class.point-inactive]="!point.active"
         (click)="setActive(point.id)"
+        (keydown.enter)="setActive(point.id)"
+        tabindex="0"
+        [attr.aria-label]="'Go to comment ' + ($index + 1)"
       ></a>
       }
     </nav>
-    <button class="btn-next" (click)="next()"></button>
+    <button
+      class="btn-next"
+      (click)="next()"
+      [disabled]="isTransitioning"
+      aria-label="Next Comment"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M9 18l6-6-6-6" />
+      </svg>
+    </button>
   </div>
 </section>
