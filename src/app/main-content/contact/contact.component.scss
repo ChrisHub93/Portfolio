@@ -58,7 +58,7 @@ h3 {
       gap: 10px;
       padding: 32px;
       position: relative;
-      :focus{
+      :focus {
         outline: none;
       }
 
@@ -132,7 +132,7 @@ h3 {
   cursor: pointer;
   font-size: 22px;
   user-select: none;
-
+  
   &:hover {
     background-color: #3dcfb780;
   }
@@ -177,7 +177,6 @@ h3 {
     }
   }
 }
-
 
 .submit-btn {
   margin-top: 30px;
