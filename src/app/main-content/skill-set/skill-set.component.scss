@@ -98,18 +98,19 @@ section {
   &::after {
     content: attr(data-tooltip);
     position: absolute;
-    bottom: 100%; /* erscheint oberhalb des Icons */
+    bottom: 100%;
     left: 50%;
     transform: translateX(-50%) translateY(-6px);
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(61, 207, 182);
     color: white;
+    font-size: 16px;
     padding: 6px 10px;
     border-radius: 6px;
-    font-size: 12px;
-    white-space: nowrap;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease, transform 0.3s ease;
+    white-space: normal;
+    width: 200px; 
   }
 
   &:hover::after {
@@ -117,7 +118,7 @@ section {
     transform: translateX(-50%) translateY(-12px);
   }
 
-  /* Optional: kleiner Pfeil unter dem Tooltip */
+  /* Arrow */
   &::before {
     content: "";
     position: absolute;
@@ -126,7 +127,7 @@ section {
     transform: translateX(-50%) translateY(2px);
     border-width: 6px;
     border-style: solid;
-    border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+    border-color: rgba(61, 207, 182, 0.9) transparent transparent transparent;
     opacity: 0;
     transition: opacity 0.3s ease;
   }
