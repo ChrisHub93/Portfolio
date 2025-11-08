@@ -3,7 +3,7 @@
   <h1 class="fontFira-code">What my colleagues say about me</h1>
   <div class="comments-container">
     <div class="comment-section">
-      @for (comment of visibleReferences; track $index) {
+      @for (comment of references; track $index) {
       <div
         [class.comment-active]="comment.active"
         [class.comment-passive]="!comment.active"

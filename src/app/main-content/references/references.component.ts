@@ -30,13 +30,6 @@ export class ReferencesComponent {
       comment:
         'I had the good fortune of working with Simon in a group project at the Developer Akademie that involved a lot of effort. He always stayed calm, cool, and focused, and made sure our team was set up for success. He is super knowledgeable, easy to work with, and I did happily work with him again given the chance.',
     },
-    {
-      id: 'comment_4',
-      active: false,
-      autor: 'S.Schulz - Frontend Developer',
-      comment:
-        'Bla bla bla.',
-    },
   ];
 
   setActive(id: string) {
@@ -44,29 +37,16 @@ export class ReferencesComponent {
   }
 
   next() {
-    const index = this.references.findIndex(r => r.active);
+    const index = this.references.findIndex((r) => r.active);
     this.references[index].active = false;
     this.references[(index + 1) % this.references.length].active = true;
   }
 
   prev() {
-    const index = this.references.findIndex(r => r.active);
+    const index = this.references.findIndex((r) => r.active);
     this.references[index].active = false;
-    this.references[(index - 1 + this.references.length) % this.references.length].active = true;
+    this.references[
+      (index - 1 + this.references.length) % this.references.length
+    ].active = true;
   }
-
-  // Sichtbare 3 Elemente: links, mittig (aktiv), rechts
-  get visibleReferences() {
-    const activeIndex = this.references.findIndex(r => r.active);
-
-    const prevIndex = (activeIndex - 1 + this.references.length) % this.references.length;
-    const nextIndex = (activeIndex + 1) % this.references.length;
-
-    return [
-      this.references[prevIndex],
-      this.references[activeIndex],
-      this.references[nextIndex],
-    ];
-  }
-
 }
