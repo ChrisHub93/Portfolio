@@ -43,7 +43,7 @@ section {
       content: "";
       position: absolute;
       top: 50%;
-      right: -16px; // Startposition (kannst du anpassen)
+      right: -16px;
       transform: translateY(-50%) translateX(-100px);
       width: 8px;
       height: 8px;
@@ -59,7 +59,7 @@ section {
 
       &::after {
         opacity: 1;
-        transform: translateY(-50%) translateX(-120px); // bewegt sich leicht nach rechts
+        transform: translateY(-50%) translateX(-120px);
       }
     }
   }

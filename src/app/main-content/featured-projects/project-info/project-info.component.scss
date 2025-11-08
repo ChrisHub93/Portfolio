@@ -130,6 +130,9 @@ section {
   text-align: center;
   font-weight: 400;
   color: $aqua;
+  >.arrow-next {
+    transition: transform 0.2s ease;
+  }
   &:hover {
     cursor: pointer;
     color: white;
@@ -137,20 +140,4 @@ section {
       transform: translateX(6px) scale(1.1);
     }
   }
-}
-
-.button {
-  &:hover {
-    .arrow-outward {
-      transform: translateX(6px) translateY(-3px);
-    }
-  }
-}
-
-.arrow-next {
-  transition: transform 0.2s ease;
-}
-
-.arrow-outward {
-  transition: transform 0.2s ease;
 }

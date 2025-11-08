@@ -91,10 +91,34 @@ section {
     }
   }
 
-  > img {
+  > .icon {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("./../../../assets/icons/point_aqua.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 8px;
+      height: 8px;
+      top: 30%;
+      right: 3px;  
+      opacity: 0; 
+      transition: transform 0.3s ease, opacity 0.3s ease; 
+    }
     &:hover {
-      cursor: pointer;
-      filter: brightness(0) saturate(100%) invert(1);
+      &::after {
+        opacity: 1;
+        transform: translateX(20px);
+      }
+    }
+    > img {
+
+      &:hover {
+        cursor: pointer;
+        filter: brightness(0) saturate(100%) invert(1);
+      }
     }
   }
 
@@ -107,43 +131,42 @@ section {
 }
 
 .marquee {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 105%;
-    height: 62px;
-    transform: translateY(-65px) translateX(-65px) rotate(-5deg);
-    background-color: rgba(56, 56, 56, 0.886);
-    overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 105%;
+  height: 62px;
+  transform: translateY(-65px) translateX(-65px) rotate(-5deg);
+  background-color: rgba(56, 56, 56, 0.886);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+
+  > div {
     display: flex;
-    align-items: center;
-  
-    > div {
-      display: flex;
-      gap: 70px;
-      white-space: nowrap;
-      animation: marquee 15s linear infinite;
-      &:hover{
-        cursor: default;
-        animation-play-state: paused;
-    }
-    }
-  
-    span {
-      font-size: 32px;
-      color: $aqua;
-    }
-    
-  }
-  
-  @keyframes marquee {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
+    gap: 70px;
+    white-space: nowrap;
+    animation: marquee 15s linear infinite;
+    &:hover {
+      cursor: default;
+      animation-play-state: paused;
     }
   }
+
+  span {
+    font-size: 32px;
+    color: $aqua;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
 @keyframes arrow-movement {
   0% {
