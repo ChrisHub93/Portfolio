@@ -8,7 +8,6 @@ section {
   align-items: center;
   padding: 102px 0;
   gap: 48px;
-  font-family: Arial, sans-serif;
 }
 
 .vignette {
@@ -69,9 +68,6 @@ h1 {
   min-width: 632px;
   font-size: 20px;
   font-weight: 400;
-  padding: 24px;
-  box-sizing: border-box;
-  border-radius: 8px;
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
