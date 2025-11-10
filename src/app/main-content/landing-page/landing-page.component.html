@@ -6,13 +6,27 @@
     <h2>Frontend Developer</h2>
     <h1>Christian Müller</h1>
     <div class="buttons">
-      <button class="button">
+      <button
+        (click)="mainTs.scrollToSection('featured-projects-scroll')"
+        class="button"
+      >
         Check my work
-        <img class="arrow-outward" src="assets/icons/arrow_outward_aqua.png" alt="Arrow icon" />
+        <img
+          class="arrow-outward"
+          src="assets/icons/arrow_outward_aqua.png"
+          alt="Arrow icon"
+        />
       </button>
-      <button class="button">
+
+      <button
+      (click)="mainTs.scrollToSection('contact-scroll')"
+       class="button">
         Contact me
-        <img class="arrow-outward" src="assets/icons/arrow_outward_aqua.png" alt="Arrow icon" />
+        <img
+          class="arrow-outward"
+          src="assets/icons/arrow_outward_aqua.png"
+          alt="Arrow icon"
+        />
       </button>
     </div>
   </div>
@@ -24,7 +38,7 @@
   </div>
 
   <div class="right-lateral">
-    <a href="">christianmueller8gmx.net</a>
+    <a href="#contact-scroll">christianmueller8gmx.net</a>
     <div class="icon">
       <img src="assets/icons/gitHub_icon.png" alt="" />
     </div>

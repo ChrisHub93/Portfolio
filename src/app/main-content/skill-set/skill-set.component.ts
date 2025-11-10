@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppComponent } from '../../app.component';
 
 @Component({
   selector: 'app-skill-set',
@@ -20,4 +21,6 @@ export class SkillSetComponent {
     'REST-API',
     'Scrum',
   ];
+
+  constructor(public mainTs: AppComponent){}
 }

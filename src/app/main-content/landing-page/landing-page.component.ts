@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavbarComponent } from "./navbar/navbar.component";
+import { AppComponent } from '../../app.component';
+
 
 @Component({
   selector: 'app-landing-page',
@@ -8,6 +10,7 @@ import { NavbarComponent } from "./navbar/navbar.component";
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
-export class LandingPageComponent {
+export class LandingPageComponent{
+  constructor(public mainTs: AppComponent){}
 
 }

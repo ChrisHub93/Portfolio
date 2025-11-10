@@ -12,4 +12,11 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 })
 export class AppComponent {
   title = 'Portfolio';
+
+  scrollToSection(id: string) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 }
