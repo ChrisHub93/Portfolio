@@ -34,9 +34,7 @@
       (click)="prev()"
       [disabled]="isTransitioning"
       aria-label="Previous Comment"
-    >
-    <img src="assets/icons/arrow_back.png" alt="">
-    </button>
+    ></button>
     <nav class="points">
       @for (point of references; track point.id) {
       <a
@@ -54,8 +52,6 @@
       (click)="next()"
       [disabled]="isTransitioning"
       aria-label="Next Comment"
-    >
-    <img src="assets/icons/arrow_forward_white.png" alt="">
-    </button>
+    ></button>
   </div>
 </section>
