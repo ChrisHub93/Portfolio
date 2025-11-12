@@ -11,12 +11,9 @@
       @for (project of projects; track $index) {
 
       <!-- Liste mit Projecten -->
-      <div
-        (click)="openProjectInfo(project)"
-        (mouseenter)="showImage(project.name)"
-        (mouseleave)="hideImage()"
-        class="project"
-      >
+      <div 
+      (click)="openProjectInfo(project)"
+      class="project c{{ project.id }}">
         <div class="line"></div>
         <div class="project-info">
           <div>
@@ -50,36 +47,6 @@
       }
     </div>
 
-    <div
-      class="project-images-container"
-      [ngClass]="{
-        center: showElPolloLocoImg,
-        end: showDABubbleImg,
-      }"
-    >
-      @if(showJoinImg){
-      <img
-        class="join-img"
-        src="assets/img/featured_projects/join.png"
-        alt=""
-      />
-      } @if(showElPolloLocoImg){
-      <img
-        class="pollo-img"
-        src="assets/img/featured_projects/el_pollo_loco.png"
-        alt=""
-      />} @if(showPokedexImg){
-      <img
-        class="pokedex-img"
-        src="assets/img/featured_projects/pokedex.png"
-        alt=""
-      />}
-      @if(showDABubbleImg){
-        <img
-          class="bubble-img"
-          src="assets/img/featured_projects/da_bubble.png"
-          alt=""
-        />}
-    </div>
+    <div class="project-images-container"></div>
   </div>
 </section>
