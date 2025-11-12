@@ -12,6 +12,7 @@ import { ProjectInfoComponent } from "./project-info/project-info.component";
 export class FeaturedProjectsComponent {
   showJoinImg = false;
   showElPolloLocoImg = false;
+  showPokedexImg = false;
   showDABubbleImg = false;
   projectInfoOpen = false;
   selectedProject: any = null; 
@@ -32,6 +33,13 @@ export class FeaturedProjectsComponent {
     },
     {
       id :'03',
+      name: 'Pokedex',
+      skills: [ 'JavaScript', 'HTML', 'CSS', 'REST-API'],
+      description:
+        'This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
+    },
+    {
+      id :'04',
       name: 'DA Bubble',
       skills: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
       description:
@@ -61,5 +69,6 @@ export class FeaturedProjectsComponent {
     this.showJoinImg = false;
     this.showElPolloLocoImg = false;
     this.showDABubbleImg = false;
+    this.showPokedexImg = false;
   }
 }
