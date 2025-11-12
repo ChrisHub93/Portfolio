@@ -85,101 +85,43 @@ section {
   }
 }
 
-.projects-container{
-  >.c01 {
+.projects-container {
+  > .project {
     position: relative;
-    &::after{
+
+    &::after {
       content: "";
       position: absolute;
       top: -90%;
       right: -313px;
       height: 320px;
       width: 320px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      opacity: 0;
+    }
+
+    &:hover::after {
+      opacity: 1;
+      transform: translateX(20px);
+    }
+
+    &.c01::after {
       background-image: url("./../../../assets/img/featured_projects/join.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      transition: transform 0.3s ease, opacity 0.3s ease; 
-      opacity: 0;
     }
-    &:hover{
-      &::after{
-        opacity: 1;
-        transform: translateX(20px);
-      }      
-    }
-  }
-  >.c02 {
-    position: relative;
-    &::after{
-      content: "";
-      position: absolute;
-      top: -90%;
-      right: -313px;
-      height: 320px;
-      width: 320px;
+    &.c02::after {
       background-image: url("./../../../assets/img/featured_projects/el_pollo_loco.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      transition: transform 0.3s ease, opacity 0.3s ease; 
-      opacity: 0;
     }
-    &:hover{
-      &::after{
-        opacity: 1;
-        transform: translateX(20px);
-      }      
-    }
-  }
-  >.c03 {
-    position: relative;
-    &::after{
-      content: "";
-      position: absolute;
-      top: -90%;
-      right: -313px;
-      height: 320px;
-      width: 320px;
+    &.c03::after {
       background-image: url("./../../../assets/img/featured_projects/pokedex.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      transition: transform 0.3s ease, opacity 0.3s ease; 
-      opacity: 0;
     }
-    &:hover{
-      &::after{
-        opacity: 1;
-        transform: translateX(20px);
-      }      
-    }
-  }
-  >.c04 {
-    position: relative;
-    &::after{
-      content: "";
-      position: absolute;
-      top: -90%;
-      right: -313px;
-      height: 320px;
-      width: 320px;
+    &.c04::after {
       background-image: url("./../../../assets/img/featured_projects/da_bubble.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      transition: transform 0.3s ease, opacity 0.3s ease; 
-      opacity: 0;
-    }
-    &:hover{
-      &::after{
-        opacity: 1;
-        transform: translateX(20px);
-      }      
     }
   }
 }
-
 
 .project-images-container.center {
   justify-content: center;
