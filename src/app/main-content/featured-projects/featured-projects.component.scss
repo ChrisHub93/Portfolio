@@ -107,15 +107,15 @@ section {
       opacity: 1;
       transform: translateX(20px);
     }
-
+    
     &.c01::after {
-      background-image: url("./../../../assets/img/featured_projects/join.png");
+      background-image: url("./../../../assets/img/featured_projects/pokedex.png");
     }
     &.c02::after {
-      background-image: url("./../../../assets/img/featured_projects/el_pollo_loco.png");
+      background-image: url("./../../../assets/img/featured_projects/join.png");
     }
     &.c03::after {
-      background-image: url("./../../../assets/img/featured_projects/pokedex.png");
+      background-image: url("./../../../assets/img/featured_projects/el_pollo_loco.png");
     }
     &.c04::after {
       background-image: url("./../../../assets/img/featured_projects/da_bubble.png");
