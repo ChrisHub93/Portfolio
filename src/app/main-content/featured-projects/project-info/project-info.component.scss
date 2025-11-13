@@ -19,10 +19,10 @@ section {
   );
   display: flex;
   flex-direction: column;
-  gap: 20px;
   border: 1px solid $aqua;
   border-radius: 30px;
   padding: 32px 64px;
+  height: 700px;
 }
 
 .button-close {
@@ -48,15 +48,17 @@ section {
 .left-right-side-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 48px;
+  gap: 40px;
+  height: 100%;
 }
 
 .left-side {
   display: flex;
   flex-direction: column;
   width: 50%;
-  gap: 32px;
+  height: 100%;
+  max-height: 538px;
+  justify-content: space-between;
   > .headlines {
     > h1 {
       font-size: 128px;
@@ -69,6 +71,8 @@ section {
       font-family: "Fira Code";
       font-size: 64px;
       font-weight: bold;
+      word-spacing: -24px;
+      line-height: 90%;
     }
   }
 
@@ -142,6 +146,9 @@ section {
   }
 }
 
-.placeholderButtons{
+.placeholderButtons {
   height: 50px;
+  > .in-progress {
+    font-size: 30px;
+  }
 }

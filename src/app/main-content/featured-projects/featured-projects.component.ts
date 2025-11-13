@@ -24,6 +24,7 @@ export class FeaturedProjectsComponent {
         liveTest:
           'https://christian-mueller.developerakademie.net/Pokedex/index.html',
       },
+      inProgress: false,
     },
     {
       id: '02',
@@ -33,9 +34,9 @@ export class FeaturedProjectsComponent {
         'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
       links: {
         gitHub: 'https://github.com/ChrisHub93/Join-Gruppenprojekt',
-        liveTest:
-          'https://join-464.developerakademie.net/index.html',
+        liveTest: 'https://join-464.developerakademie.net/index.html',
       },
+      inProgress: false,
     },
     {
       id: '03',
@@ -48,19 +49,20 @@ export class FeaturedProjectsComponent {
         liveTest:
           'https://christian-mueller.developerakademie.net/El_Pollo_Loco/',
       },
+      inProgress: false,
     },
 
     {
       id: '04',
-      name: 'DA Bubble (in Progress)',
+      name: 'DA Bubble',
       skills: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
       description:
         'This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
       links: {
         gitHub: '',
-        liveTest:
-          '',
+        liveTest: '',
       },
+      inProgress: true,
     },
   ];
 

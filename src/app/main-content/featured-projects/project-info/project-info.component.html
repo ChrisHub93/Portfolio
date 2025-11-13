@@ -10,6 +10,7 @@
 
         <span>What is this project about?</span>
         <p>{{ project.description }}</p>
+        
 
         <div class="test"></div>
         <div class="prject-skills">
@@ -27,7 +28,13 @@
 
         <div class="buttons">
           @if(project.links.gitHub == ''){
-          <div class="placeholderButtons"></div>
+          <div class="placeholderButtons">
+            @if(project.inProgress){
+              <p class="in-progress">
+                (in Progress)
+              </p>
+            }
+          </div>
           } @else{
           <a
             href="{{ project.links.gitHub }}"
