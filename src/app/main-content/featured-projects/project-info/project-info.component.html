@@ -7,13 +7,11 @@
           <h1>{{ project.id }}</h1>
           <h2>{{ project.name }}</h2>
         </div>
-    
+
         <span>What is this project about?</span>
         <p>{{ project.description }}</p>
-  
-        <div class="test">
-          
-        </div>
+
+        <div class="test"></div>
         <div class="prject-skills">
           @for (skill of project.skills; track $index) {
           <div class="skill">
@@ -26,28 +24,53 @@
           </div>
           }
         </div>
-  
+
         <div class="buttons">
-          <button class="button">
+          @if(project.links.gitHub == ''){
+          <div class="placeholderButtons"></div>
+          } @else{
+          <a
+            href="{{ project.links.gitHub }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button"
+          >
             GitHub
-            <img class="arrow-outward" src="assets/icons/arrow_outward_aqua.png" alt="Arrow outward" />
-          </button>
-          <button class="button">
+            <img
+              class="arrow-outward"
+              src="assets/icons/arrow_outward_aqua.png"
+              alt="Arrow outward"
+            />
+          </a>
+          <a
+            href="{{ project.links.liveTest }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button"
+          >
             Live Test
-            <img class="arrow-outward" src="assets/icons/arrow_outward_aqua.png" alt="Arrow outward" />
-          </button>
+            <img
+              class="arrow-outward"
+              src="assets/icons/arrow_outward_aqua.png"
+              alt="Arrow outward"
+            />
+          </a>
+          }
         </div>
       </div>
-  
+
       <div class="right-side">
-        <img src="assets/img/project_info/{{project.name}}.png" alt="">
+        <img src="assets/img/project_info/{{ project.name }}.png" alt="" />
       </div>
     </div>
-    
 
     <button class="button-next" (click)="nextProject()">
       Next project
-      <img class="arrow-next" src="assets/icons/arrow_forward_aqua.png" alt="Arrow forward" />
+      <img
+        class="arrow-next"
+        src="assets/icons/arrow_forward_aqua.png"
+        alt="Arrow forward"
+      />
     </button>
   </div>
 </section>

@@ -19,6 +19,11 @@ export class FeaturedProjectsComponent {
       skills: ['JavaScript', 'HTML', 'CSS', 'REST-API'],
       description:
         'This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
+      links: {
+        gitHub: 'https://github.com/ChrisHub93/Pokedex',
+        liveTest:
+          'https://christian-mueller.developerakademie.net/Pokedex/index.html',
+      },
     },
     {
       id: '02',
@@ -26,6 +31,11 @@ export class FeaturedProjectsComponent {
       skills: ['TypeScript', 'HTML', 'CSS', 'Firebase'],
       description:
         'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
+      links: {
+        gitHub: 'https://github.com/ChrisHub93/Join-Gruppenprojekt',
+        liveTest:
+          'https://join-464.developerakademie.net/index.html',
+      },
     },
     {
       id: '03',
@@ -33,14 +43,24 @@ export class FeaturedProjectsComponent {
       skills: ['HTML', 'CSS', 'JavaScript'],
       description:
         'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen. ',
+      links: {
+        gitHub: 'https://github.com/ChrisHub93/El_Pollo_Loco',
+        liveTest:
+          'https://christian-mueller.developerakademie.net/El_Pollo_Loco/',
+      },
     },
-   
+
     {
       id: '04',
       name: 'DA Bubble (in Progress)',
       skills: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
       description:
         'This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
+      links: {
+        gitHub: '',
+        liveTest:
+          '',
+      },
     },
   ];
 
