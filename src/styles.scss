@@ -79,3 +79,8 @@ a {
     background-image: url("./assets/icons/logo_hover.png");
   }
 }
+
+.no-scroll {
+  overflow: hidden !important;
+  height: 100vh;
+}
