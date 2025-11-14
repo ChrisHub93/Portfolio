@@ -1,0 +1,35 @@
+@import "./../../styles.scss";
+section {
+  background-color: $backgroundDark;
+  width: 100%;
+  display: flex;
+  padding: 102px 96px;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 64px;
+  align-self: center;
+  color: $aqua;
+  margin-top: 64px;
+  margin-bottom: 64px;
+}
+
+.imprint {
+  font-size: 19px;
+}
+
+.legal-notice-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  p {
+    font-size: 16px;
+    color: $aqua;
+  }
+  div {
+    > h2 {
+      font-size: 16px;
+    }
+  }
+}
