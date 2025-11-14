@@ -68,9 +68,11 @@ export class FeaturedProjectsComponent {
 
   openProjectInfo(project: any) {
     this.selectedProject = project;
+    document.body.classList.add('no-scroll');
   }
 
   closeProjectInfo() {
     this.selectedProject = null;
+    document.body.classList.remove('no-scroll');
   }
 }
