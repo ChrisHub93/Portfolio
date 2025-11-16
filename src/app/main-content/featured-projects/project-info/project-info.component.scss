@@ -76,16 +76,18 @@ section {
     }
   }
 
-  > span {
-    font-family: "Fira Code";
-    font-size: 24px;
-    font-weight: bold;
-    color: $aqua;
+  > div {
+    > span {
+      font-family: "Fira Code";
+      font-size: 24px;
+      font-weight: bold;
+      color: $aqua;
+    }
+    > p {
+      font-size: 18px;
+    }
   }
-  > p {
-    min-height: 72px;
-    font-size: 18px;
-  }
+
   > .buttons {
     display: flex;
     gap: 30px;

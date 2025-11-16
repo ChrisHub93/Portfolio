@@ -8,9 +8,17 @@
           <h2>{{ project.name }}</h2>
         </div>
 
-        <span>What is this project about?</span>
-        <p>{{ project.description }}</p>
-        
+        <div>
+          <span>What is this project about?</span>
+          <p>{{ project.description }}</p>
+        </div>
+
+        @if(project.challange != ""){
+        <div>
+          <span>What I have learned </span>
+          <p>{{ project.challange }}</p>
+        </div>
+        }
 
         <div class="test"></div>
         <div class="prject-skills">
@@ -30,9 +38,7 @@
           @if(project.links.gitHub == ''){
           <div class="placeholderButtons">
             @if(project.inProgress){
-              <p class="in-progress">
-                (in Progress)
-              </p>
+            <p class="in-progress">(in Progress)</p>
             }
           </div>
           } @else{
