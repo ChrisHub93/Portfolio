@@ -4,12 +4,16 @@
     <h1 class="fontFira-code">Let's work together</h1>
     <h3>Got a problem to solve?</h3>
     <span
-      >Encourage people to contact you and describe what role you are interested
-      in. Show that you will add value to their projects through your work.
+      >I'm currently training to become a Junior Frontend Developer and I'm
+      excited to take the next step in my career. If you're looking for someone
+      who is motivated, eager to learn, and ready to grow with your team, feel
+      free to contact me. I'm confident that through my dedication, discipline,
+      and passion for clean and efficient solutions, I can bring real value to
+      your projects.
     </span>
     <div>
       <span>Need a Frontend developer?</span>
-      <p>Let’s talk!</p>
+      <p>Let's talk!</p>
     </div>
   </div>
 
@@ -94,20 +98,22 @@
         <span>and agree to the processing of my data as outlined.</span>
       </div>
       @if (!checkbox.valid && checkbox.touched && !checkbox.disabled) {
-        <span class="error-message">Please accept the policy</span>
-        }
+      <span class="error-message">Please accept the policy</span>
+      }
     </div>
 
     @if (name.valid && email.valid && message.valid && checkbox.valid) {
-    <button type="submit" value="Submit" class="submit-btn">Say Hello ;)</button>
+    <button type="submit" value="Submit" class="submit-btn">
+      Say Hello ;)
+    </button>
     }@else {
-      <div class="placeholder-button"></div>
+    <div class="placeholder-button"></div>
     }
   </form>
 
   @if (showMessage) {
-    <div class="success-message-overlay">
-      <app-success-message></app-success-message>
-    </div>    
+  <div class="success-message-overlay">
+    <app-success-message></app-success-message>
+  </div>
   }
 </section>
