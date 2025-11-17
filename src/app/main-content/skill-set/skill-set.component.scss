@@ -110,7 +110,7 @@ section {
     pointer-events: none;
     transition: opacity 0.3s ease, transform 0.3s ease;
     white-space: normal;
-    width: 200px; 
+    width: 200px;
   }
 
   &:hover::after {
@@ -135,4 +135,38 @@ section {
   &:hover::before {
     opacity: 1;
   }
+}
+
+@keyframes appear-left {
+  from {
+    transform: translateX(-100%);
+    scale: 0.5;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes appear-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.block_left {
+  animation: appear-left linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.block_right {
+  animation: appear-right linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
