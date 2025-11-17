@@ -13,29 +13,30 @@ export class ReferencesComponent {
     {
       id: 'comment_1',
       active: false,
-      autor: 'T.Schulz - Frontend Developer',
+      autor: 'S. Langer - Team Partner',
       comment:
-        'Our project benefited enormously from Lukas efficient way of working.',
+        'Thanks to his strategic planning, we were able to work efficiently from the very beginning.',
     },
     {
       id: 'comment_2',
       active: true,
-      autor: 'H.Janisch - Team Partner',
+      autor: 'L. Junker - Frontend Developer',
       comment:
-        'Lukas has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project. ',
+        'Gained valuable practical experience in a short time and applied it very effectively in his projects.',
     },
     {
       id: 'comment_3',
       active: false,
-      autor: 'A. Fischer - Team Partner',
+      autor: 'D. Meier - Team Partner',
       comment:
-        'I had the good fortune of working with Simon in a group project at the Developer Akademie that involved a lot of effort. He always stayed calm, cool, and focused, and made sure our team was set up for success. He is super knowledgeable, easy to work with, and I did happily work with him again given the chance.',
+        'He gives constructive feedback and is equally open to receiving it, which makes working together very pleasant and effective.',
     },
     {
       id: 'comment_4',
       active: false,
-      autor: 'A. Fischer - Team Partner',
-      comment: 'blabla',
+      autor: 'T. Kowskowski - Colleague',
+      comment:
+        'He is very disciplined. Once he sets his mind on something, he follows through and gets it done.',
     },
   ];
 
