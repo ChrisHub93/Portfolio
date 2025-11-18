@@ -1,3 +1,4 @@
+@if (mainTs.languageEnglish) {
 <section>
   <div class="image-container block">
     <img src="assets/img/profile_image_hover.png" alt="Hover effect" />
@@ -22,7 +23,7 @@
         projects I build.</span
       >
       <div>
-        <img src="assets/icons/about_me/location_on.png" alt="" />
+        <img src="assets/icons/about_me/location_on.png" alt="Location icon" />
         <span
           >I'm based in Kerpen (by Cologne). I'm open to working remotely,
           on-site, or in a hybrid setup — whatever fits best with the team and
@@ -30,7 +31,7 @@
         >
       </div>
       <div>
-        <img src="assets/icons/about_me/cognition.png" alt="" />
+        <img src="assets/icons/about_me/cognition.png" alt="Cognition icon" />
         <span
           >I'm very open-minded and genuinely enjoy learning new technologies.
           I'm always looking for ways to improve my skills and grow as a
@@ -38,7 +39,7 @@
         >
       </div>
       <div>
-        <img src="assets/icons/about_me/quality.png" alt="" />
+        <img src="assets/icons/about_me/quality.png" alt="Quality icon" />
         <span
           >I always aim for efficient and elegant solutions. I rely on deep
           analytical thinking, creativity, persistence, and strategic planning
@@ -49,3 +50,58 @@
     </div>
   </div>
 </section>
+} @else {
+<section>
+  <div class="image-container block">
+    <img src="assets/img/profile_image_hover.png" alt="Hover effect" />
+    <img
+      class="profile"
+      src="assets/img/profile_image.png"
+      alt="Profile image"
+    />
+  </div>
+
+  <div class="about-me-container block">
+    <span class="about-me-container__headline">Wer bin Ich</span>
+    <div class="about-me text-frame">
+      <h2 class="about-me__headline">Über mich</h2>
+      <span>
+        Hey, ich bin Christian! Ich mache gerade mein Hobby zum Beruf. Ich liebe
+        das Programmieren, weil es immer etwas Neues zu lernen gibt und mich
+        jede Herausforderung weiterbringt. Ein Problem zu lösen motiviert mich
+        enorm — es zeigt mir, dass ich mich verbessert habe, und ich nutze das
+        Gelernte gerne, um die nächste Aufgabe noch besser zu meistern. Meine
+        Inspiration ziehe ich daraus, meine Fähigkeiten ständig
+        weiterzuentwickeln und echte Fortschritte in meinen Projekten zu
+        sehen.</span
+      >
+      <div>
+        <img src="assets/icons/about_me/location_on.png" alt="Standort Icon" />
+        <span
+          >Ich lebe in Kerpen (bei Köln). Ich bin offen für Remote-Arbeit,
+          Präsenzarbeit oder ein hybrides Modell — je nachdem, was am besten zum
+          Team und zum Projekt passt.</span
+        >
+      </div>
+      <div>
+        <img src="assets/icons/about_me/cognition.png" alt="Wahrnemungs Icon" />
+        <span
+          >Ich bin sehr aufgeschlossen und lerne gerne neue Technologien kennen.
+          Ich suche immer nach Möglichkeiten, meine Fähigkeiten zu verbessern
+          und als Entwickler weiterzuwachsen.</span
+        >
+      </div>
+      <div>
+        <img src="assets/icons/about_me/quality.png" alt="Qaulitatscheck Icon" />
+        <span
+          >Ich strebe stets nach effizienten und eleganten Lösungen. Ich
+          verlasse mich auf tiefgehendes analytisches Denken, Kreativität,
+          Ausdauer und strategische Planung, um Herausforderungen zu meistern.
+          Jede Aufgabe lässt mich wachsen, und ich arbeite gerne mit anderen
+          zusammen, um das bestmögliche Ergebnis zu erreichen.
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+}
