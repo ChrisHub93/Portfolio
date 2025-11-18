@@ -1,9 +1,9 @@
 <nav>
   <div class="menu">
     @if(lang.languageEnglish()){
-    <button (click)="lang.languageEnglish.set(false)" class="english_btn"></button>
+    <button (click)="lang.setEnglish(false)" class="english_btn"></button>
     }@else{
-    <button (click)="lang.languageEnglish.set(true)" class="german_btn"></button>
+    <button (click)="lang.setEnglish(true)" class="german_btn"></button>
     }
 
     <a href="#about-me-scroll">About me</a>

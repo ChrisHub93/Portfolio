@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { MainContentComponent } from '../../main-content.component';
 import { LanguageService } from '../../../language.service';
 
 @Component({
