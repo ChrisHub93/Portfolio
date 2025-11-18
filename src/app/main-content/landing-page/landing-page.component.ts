@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavbarComponent } from "./navbar/navbar.component";
 import { AppComponent } from '../../app.component';
+import { MainContentComponent } from '../main-content.component';
 
 
 @Component({
@@ -11,6 +12,6 @@ import { AppComponent } from '../../app.component';
   styleUrl: './landing-page.component.scss'
 })
 export class LandingPageComponent{
-  constructor(public mainTs: AppComponent){}
+  constructor(public mainTs: MainContentComponent){}
 
 }

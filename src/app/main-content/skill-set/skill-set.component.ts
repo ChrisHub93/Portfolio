@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AppComponent } from '../../app.component';
+import { MainContentComponent } from '../main-content.component';
 
 @Component({
   selector: 'app-skill-set',
@@ -22,5 +22,5 @@ export class SkillSetComponent {
     'Scrum',
   ];
 
-  constructor(public mainTs: AppComponent){}
+  constructor(public mainTs: MainContentComponent){}
 }
