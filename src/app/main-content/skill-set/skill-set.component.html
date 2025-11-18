@@ -1,24 +1,40 @@
 <section>
   <div class="skill-set-container block_left">
-    <span>Technologies</span>
+    <span>{{
+      lang.languageEnglish() ? langTexts.en.headline : langTexts.de.headline
+    }}</span>
     <div class="skill-set text-frame">
-      <h2>Skill Set</h2>
+      <h2>
+        {{ lang.languageEnglish() ? langTexts.en.title : langTexts.de.title }}
+      </h2>
 
       <span>
-        I've built a strong foundation in front-end development and really enjoy
-        working with modern tools and frameworks. What excites me most is how
-        fast the web evolves — there's always something new to explore. I'm
-        genuinely curious and love expanding my skill set, learning new
-        technologies, and improving step by step.
+        {{
+          lang.languageEnglish()
+            ? langTexts.en.textSkillSet
+            : langTexts.de.textSkillSet
+        }}
       </span>
 
       <span class="skill-set__another-skill">
-        You need&nbsp; <span>another skill?</span>
+        {{
+          lang.languageEnglish()
+            ? langTexts.en.textYouNeedOne
+            : langTexts.de.textYouNeedOne
+        }}
+        &nbsp;<span>{{
+          lang.languageEnglish()
+            ? langTexts.en.textYouNeedTwo
+            : langTexts.de.textYouNeedTwo
+        }}</span>
       </span>
 
       <span>
-        Feel free to contact me. I look forward to expanding on my previous
-        knowledge.
+        {{
+          lang.languageEnglish()
+            ? langTexts.en.textContactMe
+            : langTexts.de.textContactMe
+        }}
       </span>
 
       <button (click)="scrollToSection('contact-scroll')" class="button">
@@ -42,7 +58,11 @@
 
     <div
       class="growth-icon"
-      data-tooltip="A mindset focused on learning and improvement"
+      [attr.data-tooltip]="
+        lang.languageEnglish()
+          ? 'A mindset focused on learning and improvement'
+          : 'Ich fokussiere mein Mindset aufs lernen und verbessern'
+      "
     >
       <img src="assets/icons/skill_set/Growth Mindset.png" alt="" />
       <span>Growth mindset</span>
