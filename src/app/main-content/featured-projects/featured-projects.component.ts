@@ -1,6 +1,7 @@
 import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { ProjectInfoComponent } from './project-info/project-info.component';
+import { MainContentComponent } from '../main-content.component';
 
 @Component({
   selector: 'app-featured-projects',
@@ -10,6 +11,8 @@ import { ProjectInfoComponent } from './project-info/project-info.component';
   imports: [ProjectInfoComponent],
 })
 export class FeaturedProjectsComponent {
+
+  constructor(public mainTs: MainContentComponent){}
   projectInfoOpen = false;
   selectedProject: any = null;
   projects = [

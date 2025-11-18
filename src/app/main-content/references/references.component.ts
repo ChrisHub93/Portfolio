@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MainContentComponent } from '../main-content.component';
 
 @Component({
   selector: 'app-references',
@@ -48,7 +49,7 @@ export class ReferencesComponent {
   isTransitioning: boolean = false;
   transitionDurationMs: number = 500;
 
-  constructor() {
+  constructor(public mainTs: MainContentComponent) {
     this.setupDisplayComments();
     this.updateWidthsForMobile();
     if (typeof window !== 'undefined') {

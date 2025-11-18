@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { SuccessMessageComponent } from './success-message/success-message.component';
+import { MainContentComponent } from '../main-content.component';
 
 @Component({
   selector: 'app-contact',
@@ -11,6 +12,7 @@ import { SuccessMessageComponent } from './success-message/success-message.compo
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
+  constructor(public mainTs: MainContentComponent){}
   http = inject(HttpClient);
 
   accepted = false;

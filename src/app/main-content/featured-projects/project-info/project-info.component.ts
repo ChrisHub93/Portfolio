@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { MainContentComponent } from '../../main-content.component';
 
 @Component({
   selector: 'app-project-info',
@@ -8,6 +9,8 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrl: './project-info.component.scss',
 })
 export class ProjectInfoComponent {
+
+  constructor(public mainTs: MainContentComponent){}
   @Input() project: any;
   @Input() projects: any[] = [];
   @Output() close = new EventEmitter<void>();

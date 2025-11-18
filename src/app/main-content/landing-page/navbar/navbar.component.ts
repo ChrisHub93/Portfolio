@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MainContentComponent } from '../../main-content.component';
 
 @Component({
   selector: 'app-navbar',
@@ -8,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
-  languageEnglish: boolean = true;
+
+  constructor(public mainTs: MainContentComponent){}
+
 }
