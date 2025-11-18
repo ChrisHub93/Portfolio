@@ -1,16 +1,21 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from "./navbar/navbar.component";
-import { MainContentComponent } from '../main-content.component';
-
+import { NavbarComponent } from './navbar/navbar.component';
+import { LanguageService } from '../../language.service';
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
   imports: [NavbarComponent],
   templateUrl: './landing-page.component.html',
-  styleUrl: './landing-page.component.scss'
+  styleUrl: './landing-page.component.scss',
 })
-export class LandingPageComponent{
-  constructor(public mainTs: MainContentComponent){}
+export class LandingPageComponent {
+  constructor(public lang: LanguageService) {}
 
+  scrollToSection(id: string) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 }

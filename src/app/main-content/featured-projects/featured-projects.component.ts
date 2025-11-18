@@ -1,7 +1,6 @@
-import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { ProjectInfoComponent } from './project-info/project-info.component';
-import { MainContentComponent } from '../main-content.component';
+import { LanguageService } from '../../language.service';
 
 @Component({
   selector: 'app-featured-projects',
@@ -12,7 +11,7 @@ import { MainContentComponent } from '../main-content.component';
 })
 export class FeaturedProjectsComponent {
 
-  constructor(public mainTs: MainContentComponent){}
+constructor(public lang: LanguageService){}
   projectInfoOpen = false;
   selectedProject: any = null;
   projects = [

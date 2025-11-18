@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MainContentComponent } from '../main-content.component';
+import { LanguageService } from '../../language.service';
 
 @Component({
   selector: 'app-about-me',
@@ -9,5 +9,5 @@ import { MainContentComponent } from '../main-content.component';
   styleUrl: './about-me.component.scss'
 })
 export class AboutMeComponent {
-constructor(public mainTs: MainContentComponent){}
+constructor(public lang: LanguageService){}
 }

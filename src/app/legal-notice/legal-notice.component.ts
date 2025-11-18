@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavbarComponent } from "../main-content/landing-page/navbar/navbar.component";
-import { MainContentComponent } from '../main-content/main-content.component';
+import { LanguageService } from '../language.service';
 
 @Component({
   selector: 'app-legal-notice',
@@ -10,5 +10,5 @@ import { MainContentComponent } from '../main-content/main-content.component';
   styleUrl: './legal-notice.component.scss'
 })
 export class LegalNoticeComponent {
-constructor(public mainTs: MainContentComponent){}
+constructor(public lang: LanguageService){}
 }

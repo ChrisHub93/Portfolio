@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MainContentComponent } from '../../main-content.component';
+import { LanguageService } from '../../../language.service';
 
 @Component({
   selector: 'app-success-message',
@@ -9,6 +10,6 @@ import { MainContentComponent } from '../../main-content.component';
   styleUrl: './success-message.component.scss'
 })
 export class SuccessMessageComponent {
-constructor(public mainTs: MainContentComponent){}
+constructor(public lang: LanguageService){}
 
 }

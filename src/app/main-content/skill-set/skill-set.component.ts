@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MainContentComponent } from '../main-content.component';
+import { LanguageService } from '../../language.service';
 
 @Component({
   selector: 'app-skill-set',
@@ -22,5 +23,12 @@ export class SkillSetComponent {
     'Scrum',
   ];
 
-  constructor(public mainTs: MainContentComponent){}
+  constructor(public lang: LanguageService){}
+
+  scrollToSection(id: string) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 }

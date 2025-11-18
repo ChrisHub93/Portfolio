@@ -23,10 +23,5 @@ import { SkillSetComponent } from './skill-set/skill-set.component';
 export class MainContentComponent {
   languageEnglish: boolean = true;
 
-  scrollToSection(id: string) {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  }
+
 }

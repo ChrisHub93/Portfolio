@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { SuccessMessageComponent } from './success-message/success-message.component';
-import { MainContentComponent } from '../main-content.component';
+import { LanguageService } from '../../language.service';
 
 @Component({
   selector: 'app-contact',
@@ -12,7 +12,7 @@ import { MainContentComponent } from '../main-content.component';
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
-  constructor(public mainTs: MainContentComponent){}
+  constructor(public lang: LanguageService){}
   http = inject(HttpClient);
 
   accepted = false;
