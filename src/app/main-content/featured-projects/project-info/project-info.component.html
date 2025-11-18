@@ -9,14 +9,14 @@
         </div>
 
         <div>
-          <span>What is this project about?</span>
-          <p>{{ project.description }}</p>
+          <span>{{ lang.languageEnglish() ? langTexts.en.aboutTitle : langTexts.de.aboutTitle }}</span>
+          <p>{{ lang.languageEnglish() ? project.descriptionEN : project.descriptionDE }}</p>
         </div>
 
-        @if(project.challange != ""){
+        @if(project.challangeEN != ""){
         <div>
-          <span>What I have learned </span>
-          <p>{{ project.challange }}</p>
+          <span>{{ lang.languageEnglish() ? langTexts.en.challangeTitle : langTexts.de.challangeTitle }}</span>
+          <p>{{ lang.languageEnglish() ? project.challangeEN : project.challangeDE }}</p>
         </div>
         }
 

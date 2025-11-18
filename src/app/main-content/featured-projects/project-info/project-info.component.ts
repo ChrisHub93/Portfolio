@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { MainContentComponent } from '../../main-content.component';
+import { LanguageService } from '../../../language.service';
 
 @Component({
   selector: 'app-project-info',
@@ -9,11 +10,24 @@ import { MainContentComponent } from '../../main-content.component';
   styleUrl: './project-info.component.scss',
 })
 export class ProjectInfoComponent {
-
-  constructor(public mainTs: MainContentComponent){}
+  constructor(
+    public mainTs: MainContentComponent,
+    public lang: LanguageService
+  ) {}
   @Input() project: any;
   @Input() projects: any[] = [];
   @Output() close = new EventEmitter<void>();
+
+  langTexts = {
+    en: {
+      aboutTitle: `What is this project about?`,
+      challangeTitle: `What I have learned`,
+    },
+    de: {
+      aboutTitle: `Über das Projekt`,
+      challangeTitle: `Was habe ich gelernt`,
+    },
+  };
 
   closeInfo() {
     this.close.emit();
