@@ -10,34 +10,52 @@ import { LanguageService } from '../../language.service';
   styleUrl: './references.component.scss',
 })
 export class ReferencesComponent {
+
+  langTexts = {
+    en: {
+      headline: `What my colleagues say about me`,
+    },
+    de: {
+      headline: `Was meine Kollegen über mich sagen`,
+    },
+  };
+
   references = [
     {
       id: 'comment_1',
       active: false,
       autor: 'S. Langer - Team Partner',
-      comment:
-        'Thanks to his strategic planning, we were able to work efficiently from the very beginning.',
+      commentEN: `Thanks to his strategic planning, we were able to work efficiently 
+        from the very beginning.`,
+      commentDE: `Dank seiner strategischen Planung konnten wir von Anfang an effizient
+       arbeiten.`,
     },
     {
       id: 'comment_2',
       active: true,
       autor: 'L. Junker - Frontend Developer',
-      comment:
-        'Gained valuable practical experience in a short time and applied it very effectively in his projects.',
+      commentEN: `Gained valuable practical experience in a short time and applied
+       it very effectively in his projects.`,
+      commentDE: `Er hat in kurzer Zeit wertvolle Praxiserfahrung gesammelt und diese 
+        sehr gut in seinen Projekten umgesetzt.`,
     },
     {
       id: 'comment_3',
       active: false,
       autor: 'D. Meier - Team Partner',
-      comment:
-        'He gives constructive feedback and is equally open to receiving it, which makes working together very pleasant and effective.',
+      commentEN: `He gives constructive feedback and is equally open to receiving it, 
+        which makes working together very pleasant and effective.`,
+      commentDE: `Er gibt konstruktives Feedback und ist ebenso offen dafür, welches 
+        zu erhalten, was die Zusammenarbeit sehr angenehm macht.`,
     },
     {
       id: 'comment_4',
       active: false,
       autor: 'T. Kowskowski - Colleague',
-      comment:
-        'He is very disciplined. Once he sets his mind on something, he follows through and gets it done.',
+      commentEN: `He is very disciplined. Once he sets his mind on something, he 
+        follows through and gets it done.`,
+      commentDE: `Er ist sehr diszipliniert. Sobald er sich etwas vornimmt, setzt er 
+        es konsequent um.`,
     },
   ];
 
