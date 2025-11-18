@@ -51,8 +51,8 @@ export class ContactComponent {
       problemText: `Du hast ein Problem zu lösen?`,
       infoText: `Ich befinde mich derzeit in der Weiterbildung zum Frontend Developer 
         und freue mich darauf, den nächsten Schritt in meiner Karriere zu gehen. 
-        Wenn du jemanden suchst, der motiviert ist, lernbereit und bereit, gemeinsam 
-        mit Ihrem Team zu wachsen, kannst du mich gerne kontaktieren. Mit meiner 
+        Wenn du jemanden suchst, der motiviert, lernbereit und bereit, gemeinsam 
+        mit deinem Team zu wachsen ist, kannst du mich gerne kontaktieren. Mit meiner 
         Hingabe, Disziplin und meinem Fokus auf saubere und effiziente Lösungen kann 
         ich einen wertvollen Beitrag zu deinen Projekten leisten.`,
       needOneText: `Du brauchst einen Frontend Developer?`,
