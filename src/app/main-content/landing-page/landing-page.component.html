@@ -10,7 +10,8 @@
         (click)="scrollToSection('featured-projects-scroll')"
         class="button"
       >
-        Check my work
+        @if(lang.languageEnglish()){ Check my work }@else { Meine Projekte }
+
         <img
           class="arrow-outward"
           src="assets/icons/arrow_outward_aqua.png"
@@ -19,7 +20,7 @@
       </button>
 
       <button (click)="scrollToSection('contact-scroll')" class="button">
-        Contact me
+        @if(lang.languageEnglish()){ contact me }@else { Kontakt }
         <img
           class="arrow-outward"
           src="assets/icons/arrow_outward_aqua.png"
@@ -45,12 +46,7 @@
     >
       <img src="assets/icons/gitHub_icon.png" alt="" />
     </a>
-    <a
-      href=""
-      target="_blank"
-      rel="noopener noreferrer"
-      class="icon"
-    >
+    <a href="" target="_blank" rel="noopener noreferrer" class="icon">
       <img src="assets/icons/linkedIn_icon.png" alt="" />
     </a>
 
