@@ -1,18 +1,31 @@
 <section>
   <div class="left-side">
-    <h2>Contact me</h2>
-    <h1 class="fontFira-code">Let's work together</h1>
-    <h3>Got a problem to solve?</h3>
+    <h2>
+      {{
+        lang.languageEnglish() ? langTexts.en.headline : langTexts.de.headline
+      }}
+    </h2>
+    <h1 class="fontFira-code">
+      {{ lang.languageEnglish() ? langTexts.en.title : langTexts.de.title }}
+    </h1>
+    <h3>
+      {{
+        lang.languageEnglish()
+          ? langTexts.en.problemText
+          : langTexts.de.problemText
+      }}
+    </h3>
     <span
-      >I'm currently training to become a Junior Frontend Developer and I'm
-      excited to take the next step in my career. If you're looking for someone
-      who is motivated, eager to learn, and ready to grow with your team, feel
-      free to contact me. I'm confident that through my dedication, discipline,
-      and passion for clean and efficient solutions, I can bring real value to
-      your projects.
+      >{{
+        lang.languageEnglish() ? langTexts.en.infoText : langTexts.de.infoText
+      }}
     </span>
     <div>
-      <span>Need a Frontend developer?</span>
+      <span>{{
+        lang.languageEnglish()
+          ? langTexts.en.needOneText
+          : langTexts.de.needOneText
+      }}</span>
       <p>Let's talk!</p>
     </div>
   </div>
@@ -25,16 +38,30 @@
     <div class="input-box">
       <div class="line"></div>
       <div class="input">
-        <h3>What's your name?</h3>
+        <h3>
+          {{
+            lang.languageEnglish()
+              ? langTexts.en.titleName
+              : langTexts.de.titleName
+          }}
+        </h3>
         <input
           #name="ngModel"
           [(ngModel)]="contactData.name"
           type="text"
-          placeholder="Your name goes here"
+          [placeholder]="
+            lang.languageEnglish()
+              ? langTexts.en.placeholderName
+              : langTexts.de.placeholderName
+          "
           name="name"
           required
         />@if (!name.valid && name.touched && !name.disabled) {
-        <span class="error-message">Oops! it seems your name is missing</span>
+        <span class="error-message">{{
+          lang.languageEnglish()
+            ? langTexts.en.errorName
+            : langTexts.de.errorName
+        }}</span>
         }
       </div>
       <div class="line"></div>
@@ -43,18 +70,32 @@
     <div class="input-box">
       <div class="line"></div>
       <div class="input">
-        <h3>What's your email?</h3>
+        <h3>
+          {{
+            lang.languageEnglish()
+              ? langTexts.en.titleEmail
+              : langTexts.de.titleEmail
+          }}
+        </h3>
         <input
           #email="ngModel"
           [(ngModel)]="contactData.email"
           type="text"
-          placeholder="youremail@email.com"
+          [placeholder]="
+            lang.languageEnglish()
+              ? langTexts.en.placeholderEmail
+              : langTexts.de.placeholderEmail
+          "
           name="email"
           pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
           required
         />
         @if (!email.valid && email.touched && !email.disabled) {
-        <span class="error-message">Hoppla! your email is required</span>
+        <span class="error-message">{{
+          lang.languageEnglish()
+            ? langTexts.en.errorEmail
+            : langTexts.de.errorEmail
+        }}</span>
         }
       </div>
       <div class="line"></div>
@@ -63,18 +104,32 @@
     <div class="input-box">
       <div class="line"></div>
       <div class="input">
-        <h3>How can I help you?</h3>
+        <h3>
+          {{
+            lang.languageEnglish()
+              ? langTexts.en.titleMessage
+              : langTexts.de.titleMessage
+          }}
+        </h3>
         <input
           #message="ngModel"
           [(ngModel)]="contactData.message"
           type="text"
-          placeholder="Hello Christian, I am interested in..."
+          [placeholder]="
+            lang.languageEnglish()
+              ? langTexts.en.placeholderMessage
+              : langTexts.de.placeholderMessage
+          "
           name="message"
           minlength="4"
           required
         />
         @if (!message.valid && message.touched && !message.disabled) {
-        <span class="error-message">What do you need to develop?</span>
+        <span class="error-message">{{
+          lang.languageEnglish()
+            ? langTexts.en.errorMessage
+            : langTexts.de.errorMessage
+        }}</span>
         }
       </div>
       <div class="line"></div>
@@ -94,11 +149,32 @@
       </label>
 
       <div class="text">
-        <span>I've read the </span> <button>privacy policy</button>
-        <span>and agree to the processing of my data as outlined.</span>
+        <span
+          >{{
+            lang.languageEnglish()
+              ? langTexts.en.textCheckboxOne
+              : langTexts.de.textCheckboxOne
+          }}
+        </span>
+        <button>
+          {{
+            lang.languageEnglish()
+              ? langTexts.en.textCheckboxButton
+              : langTexts.de.textCheckboxButton
+          }}
+        </button>
+        <span>{{
+          lang.languageEnglish()
+            ? langTexts.en.textCheckboxTwo
+            : langTexts.de.textCheckboxTwo
+        }}</span>
       </div>
       @if (!checkbox.valid && checkbox.touched && !checkbox.disabled) {
-      <span class="error-message">Please accept the policy</span>
+      <span class="error-message">{{
+        lang.languageEnglish()
+          ? langTexts.en.errorCheckbox
+          : langTexts.de.errorCheckbox
+      }}</span>
       }
     </div>
 
