@@ -10,8 +10,7 @@ import { LanguageService } from '../../language.service';
   imports: [ProjectInfoComponent],
 })
 export class FeaturedProjectsComponent {
-
-constructor(public lang: LanguageService){}
+  constructor(public lang: LanguageService) {}
   projectInfoOpen = false;
   selectedProject: any = null;
   projects = [
@@ -50,7 +49,8 @@ constructor(public lang: LanguageService){}
       skills: ['HTML', 'CSS', 'JavaScript'],
       description:
         'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen. ',
-      challange: 'The main focus was object-oriented programming — building a game using loops, handling character movement, and detecting collisions between different objects.',
+      challange:
+        'The main focus was object-oriented programming — building a game using loops, handling character movement, and detecting collisions between different objects.',
       links: {
         gitHub: 'https://github.com/ChrisHub93/El_Pollo_Loco',
         liveTest:
@@ -73,6 +73,19 @@ constructor(public lang: LanguageService){}
       inProgress: true,
     },
   ];
+
+  langTexts = {
+    en: {
+      title: 'Featured Projects',
+      textPortfolio: `Explore a selection of my work here - Interact with
+        projects to see my skills in action.`,
+    },
+    de: {
+      title: 'Meine Projekte',
+      textPortfolio: `Entdecke hier eine Auswahl meiner Arbeiten – 
+        interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.`,
+    },
+  };
 
   openProjectInfo(project: any) {
     this.selectedProject = project;

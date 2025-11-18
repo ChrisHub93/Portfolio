@@ -1,9 +1,14 @@
 <section>
   <span class="section-name">Portfolio</span>
-  <h2 class="portfolio-headline">Featured Projects</h2>
-  <span>
-    Explore a selection of my work here - Interact with <br />
-    projects to see my skills in action.
+  <h2 class="portfolio-headline">
+    {{ lang.languageEnglish() ? langTexts.en.title : langTexts.de.title }}
+  </h2>
+  <span class="text-portfolio">
+    {{
+      lang.languageEnglish()
+        ? langTexts.en.textPortfolio
+        : langTexts.de.textPortfolio
+    }}
   </span>
 
   <div class="project-box">
@@ -11,9 +16,7 @@
       @for (project of projects; track $index) {
 
       <!-- Liste mit Projecten -->
-      <div 
-      (click)="openProjectInfo(project)"
-      class="project c{{ project.id }}">
+      <div (click)="openProjectInfo(project)" class="project c{{ project.id }}">
         <div class="line"></div>
         <div class="project-info">
           <div>
@@ -35,6 +38,7 @@
         </div>
       </div>
       }
+
       <!-- Overlay mit Info -->
       @if (selectedProject) {
       <div class="project-info-overlay" (click)="closeProjectInfo()">
