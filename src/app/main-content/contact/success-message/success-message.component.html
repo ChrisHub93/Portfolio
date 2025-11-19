@@ -1,10 +1,10 @@
 <section>
   <div class="message">
-    <h2>Thank you for your message!</h2>
-    <p>
-      Your email has been successfully sent.
-      <br />
-      Have a great day!
-    </p>
+    <h2>
+      {{
+        lang.languageEnglish() ? langTexts.en.headline : langTexts.de.headline
+      }}
+    </h2>
+    <p [innerHTML]="lang.languageEnglish() ? langTexts.en.text : langTexts.de.text"></p>
   </div>
 </section>
