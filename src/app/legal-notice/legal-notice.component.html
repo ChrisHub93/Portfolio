@@ -1,9 +1,15 @@
 <section>
   <app-navbar></app-navbar>
-  <h1 class="fontFira-code">Legal Notice</h1>
+  <h1 class="fontFira-code">
+    {{ lang.languageEnglish() ? langTexts.en.headline : langTexts.de.headline }}
+  </h1>
 
   <div class="legal-notice-container">
-    <h2 class="imprint">Imprint</h2>
+    <h2 class="imprint">
+      {{
+        lang.languageEnglish() ? langTexts.en.imprintTitle : langTexts.de.imprintTitle
+      }}
+    </h2>
     <div>
       <p>· Christian Rene Müller</p>
       <p>· Manheimer Ring 32</p>
@@ -11,88 +17,42 @@
     </div>
 
     <div>
-      <h2>Exploring the Board</h2>
+      <h2>{{ lang.languageEnglish() ? langTexts.en.boardTitle : langTexts.de.boardTitle }}</h2>
       <p>Email: christianmueller8&#64;gmx.net</p>
     </div>
 
     <div>
-      <h2>Acceptance of terms</h2>
-      <p>
-        By accessing and using <span>Portfolio</span> (Product), you acknowledge
-        and agree to the following terms and conditions, and any policies,
-        guidelines, or amendments thereto that may be presented to you from time
-        to time. We, the listed students, may update or change the terms and
-        conditions from time to time without notice.
-      </p>
+      <h2>{{ lang.languageEnglish() ? langTexts.en.termsTitle : langTexts.de.termsTitle }}</h2>
+      <p [innerHTML]="lang.languageEnglish() ? langTexts.en.termsTexts : langTexts.de.termsTexts"></p>
     </div>
 
     <div>
-      <h2>Scope and ownership of the product</h2>
-      <p>
-        <span>Portfolio</span> has been developed as part of a student group
-        project in a web development bootcamp at the
-        <span>Developer Akademie GmbH.</span> It has an educational purpose and
-        is not intended for extensive personal & business usage. As such, we
-        cannot guarantee consistent availability, reliability, accuracy, or any
-        other aspect of quality regarding this Product. The design of
-        <span>Portfolio</span>
-        is owned by the <span>Developer Akademie GmbH.</span> Unauthorized use,
-        reproduction, modification, distribution, or replication of the design
-        is strictly prohibited.
-      </p>
+      <h2>{{ lang.languageEnglish() ? langTexts.en.scopeTitle : langTexts.de.scopeTitle }}</h2>
+      <p [innerHTML]="lang.languageEnglish() ? langTexts.en.scopeText : langTexts.de.scopeText"></p>
     </div>
 
     <div>
-      <h2>Proprietary rights</h2>
-      <p>
-        Aside from the design owned by <span>Developer Akademie GmbH.</span>,
-        we, the listed students, retain all proprietary rights in
-        <span>Portfolio</span>, including any associated copyrighted material,
-        trademarks, and other proprietary information.
-      </p>
+      <h2>{{ lang.languageEnglish() ? langTexts.en.proprietaryTitle : langTexts.de.proprietaryTitle }}</h2>
+      <p [innerHTML]="lang.languageEnglish() ? langTexts.en.proprietaryText : langTexts.de.proprietaryText"></p>
     </div>
     <div>
-      <h2>Use of the product</h2>
-      <p>
-        <span>Portfolio</span> is intended to be used for lawful purposes only,
-        in accordance with all applicable laws and regulations. Any use of for
-        illegal activities, or to harass, harm, threaten, or intimidate another
-        person, is strictly prohibited. You are solely responsible for your
-        interactions with other users of <span>Portfolio</span>.
-      </p>
+      <h2>{{ lang.languageEnglish() ? langTexts.en.useTitle : langTexts.de.useTitle }}</h2>
+      <p [innerHTML]="lang.languageEnglish() ? langTexts.en.useText : langTexts.de.useText"></p>
     </div>
 
     <div>
-      <h2>Disclaimer of warranties and limitation of liability</h2>
-      <p>
-        <span>Portfolio</span> is provided "as is" without warranty of any kind,
-        whether express or implied, including but not limited to the implied
-        warranties of merchantability, fitness for a particular purpose, and
-        non-infringement. In no event will we, the listed students, or the
-        <span>Developer Akademie</span> , be liable for any direct, indirect,
-        incidental, special, consequential or exemplary damages, including but
-        not limited to, damages for loss of profits, goodwill, use, data, or
-        other intangible losses, even if we have been advised of the possibility
-        of such damages, arising out of or in connection with the use or
-        performance of <span>Portfolio</span>.
-      </p>
+      <h2>{{ lang.languageEnglish() ? langTexts.en.disclaimerTitle : langTexts.de.disclaimerTitle }}</h2>
+      <p [innerHTML]="lang.languageEnglish() ? langTexts.en.disclaimerText : langTexts.de.disclaimerText"></p>
     </div>
 
     <div>
-      <h2>Indemnity</h2>
-      <p>
-        You agree to indemnify, defend and hold harmless us, the listed
-        students, the <span>Developer Akademie</span>, and our affiliates,
-        partners, officers, directors, agents, and employees, from and against
-        any claim, demand, loss, damage, cost, or liability (including
-        reasonable legal fees) arising out of or relating to your use of
-        <span>Portfolio</span> and/or your breach of this Legal Notice. 26, 2025
-      </p>
+      <h2>{{ lang.languageEnglish() ? langTexts.en.indemnityTitle : langTexts.de.indemnityTitle }}</h2>
+      <p [innerHTML]="lang.languageEnglish() ? langTexts.en.indemnityText : langTexts.de.indemnityText"></p>
     </div>
-    <p>
-      For any questions or notices, please contact us at
-      [christianmueller8&#64;gmx.net].
+    <p [innerHTML]="lang.languageEnglish() ? langTexts.en.questionText : langTexts.de.questionText">
+
+      
     </p>
-    <p>Date: November 14, 2025</p>
+    <p [innerHTML]="lang.languageEnglish() ? langTexts.en.dateText : langTexts.de.dateText"></p>
   </div>
 </section>

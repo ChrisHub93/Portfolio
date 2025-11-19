@@ -35,7 +35,7 @@ export class AboutMeComponent {
     },
 
     de: {
-      headline: 'Wer Ich bin',
+      headline: `Wer Ich bin`,
       title: 'Über mich',
       textAboutMe: `Hey, ich bin Christian! Ich mache gerade mein Hobby zum Beruf. Ich liebe
         es zu Programmieren, weil es immer etwas Neues zu lernen gibt und mich
