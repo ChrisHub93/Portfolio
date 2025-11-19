@@ -9,7 +9,18 @@ import { LanguageService } from '../../../language.service';
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
+  constructor(public lang: LanguageService) {}
 
-constructor(public lang: LanguageService){}
-
+  langTexts = {
+    en: {
+      about: 'About me',
+      skills: 'Skills',
+      projects: 'Projects',
+    },
+    de: {
+      about: 'Über mich',
+      skills: 'Skills',
+      projects: 'Projekte',
+    },
+  };
 }

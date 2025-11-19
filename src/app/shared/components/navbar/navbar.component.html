@@ -6,9 +6,15 @@
     <button (click)="lang.setEnglish(true)" class="german_btn"></button>
     }
 
-    <a href="#about-me-scroll">About me</a>
-    <a href="#skill-set-scroll">Skills</a>
-    <a href="#featured-projects-scroll">Projects</a>
+    <a href="#about-me-scroll">{{
+      lang.languageEnglish() ? langTexts.en.about : langTexts.de.about
+    }}</a>
+    <a href="#skill-set-scroll">{{
+      lang.languageEnglish() ? langTexts.en.skills : langTexts.de.skills
+    }}</a>
+    <a href="#featured-projects-scroll">{{
+      lang.languageEnglish() ? langTexts.en.projects : langTexts.de.projects
+    }}</a>
   </div>
   <div class="logo">
     <a href="#landing-page-scroll"></a>
