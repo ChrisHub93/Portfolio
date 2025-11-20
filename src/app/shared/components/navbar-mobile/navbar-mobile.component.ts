@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 import { LanguageService } from '../../../language.service';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 
 @Component({
   selector: 'app-navbar-mobile',
   standalone: true,
-  imports: [],
+  imports: [MatButtonModule, MatMenuModule, MatIconModule],
   templateUrl: './navbar-mobile.component.html',
   styleUrl: './navbar-mobile.component.scss'
 })

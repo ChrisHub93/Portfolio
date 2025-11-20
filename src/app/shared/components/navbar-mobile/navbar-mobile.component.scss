@@ -96,3 +96,12 @@ nav {
     height: 100%;
   }
 }
+
+.burger-menu{
+    display: none;
+    background-color: unset;
+    border: none;
+    @media (max-width: 737px) {
+        display: block;
+      }
+}
