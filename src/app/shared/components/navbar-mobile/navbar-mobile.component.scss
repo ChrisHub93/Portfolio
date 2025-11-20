@@ -9,9 +9,19 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (min-width: 737px) {
+    display: none;
+  }
 }
 
 .menu {
+  display: flex;
+  align-items: center;
+  min-width: 401px;
+  justify-content: space-evenly;
+  @media (max-width: 522px) {
+    display: none;
+  }
   a {
     margin-left: 15px;
     font-family: "Fira Code";
@@ -45,36 +55,32 @@ nav {
   }
 }
 
-.menu {
-  display: flex;
-  align-items: center;
-  > .english_btn {
-    height: 28px;
-    width: 84px;
-    background: none;
-    border: unset;
-    background-image: url("./../../../../assets/icons/nav_button/english.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    &:hover {
-      cursor: pointer;
-      background-image: url("./../../../../assets/icons/nav_button/english_hover.png");
-    }
+.english_btn {
+  height: 28px;
+  width: 84px;
+  background: none;
+  border: unset;
+  background-image: url("./../../../../assets/icons/nav_button/english.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  &:hover {
+    cursor: pointer;
+    background-image: url("./../../../../assets/icons/nav_button/english_hover.png");
   }
-  > .german_btn {
-    height: 28px;
-    width: 84px;
-    background: none;
-    border: unset;
-    background-image: url("./../../../../assets/icons/nav_button/german.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    å &:hover {
-      cursor: pointer;
-      background-image: url("./../../../../assets/icons/nav_button/german_hover.png");
-    }
+}
+.german_btn {
+  height: 28px;
+  width: 84px;
+  background: none;
+  border: unset;
+  background-image: url("./../../../../assets/icons/nav_button/german.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  å &:hover {
+    cursor: pointer;
+    background-image: url("./../../../../assets/icons/nav_button/german_hover.png");
   }
 }
 
@@ -86,7 +92,6 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
   > a {
- 
     width: 100%;
     height: 100%;
   }
