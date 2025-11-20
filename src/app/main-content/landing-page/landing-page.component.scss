@@ -12,27 +12,42 @@ section {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding-left: 32px;
 }
 
 .centered {
   display: flex;
   flex-direction: column;
   align-items: center;
-  h2 {
-    font-family: "Fira Code";
-    font-size: 40px;
-    font-weight: 400;
-  }
   h1 {
     font-size: 128px;
     font-weight: 700;
     letter-spacing: -8px;
+    @media (max-width: 990px) {
+      font-size: 99px;
+    }
+    @media (max-width: 730px) {
+      font-size: 62px;
+      letter-spacing: -4px;
+    }
+  }
+  h2 {
+    font-family: "Fira Code";
+    font-size: 40px;
+    font-weight: 400;
+    @media (max-width: 990px) {
+      font-size: 32px;
+    }
+    @media (max-width: 730px) {
+      font-size: 24px;
+    }
   }
   > .buttons {
     margin-top: 32px;
     display: flex;
     gap: 48px;
+    @media (max-width: 990px) {
+      gap: 32px;
+    }
   }
 }
 
@@ -82,11 +97,11 @@ section {
   gap: 12px;
   width: 32px;
 
-  > .mail {
+  > .mail-desktop {
     font-size: 18px;
     transform: translateY(-100px) translateX(-4px) rotate(269deg);
     position: relative;
-    &::after{
+    &::after {
       content: "";
       position: absolute;
       background-image: url("./../../../assets/icons/point_aqua.png");
@@ -96,16 +111,27 @@ section {
       height: 8px;
       top: 50%;
       left: 50%;
-      transition: transform 0.3s ease, opacity 0.3s ease; 
+      transition: transform 0.3s ease, opacity 0.3s ease;
       opacity: 0;
     }
     &:hover {
       cursor: pointer;
       color: $aqua;
-      &::after{
+      &::after {
         opacity: 1;
         transform: translateY(20px);
       }
+    }
+    @media (max-width: 1170px) {
+      display: none;
+    }
+  }
+
+  > .mail-mobile {
+    display: none;
+    position: relative;
+    @media (max-width: 1170px) {
+      display: block;
     }
   }
 
@@ -121,9 +147,9 @@ section {
       width: 8px;
       height: 8px;
       top: 30%;
-      right: 3px;  
-      opacity: 0; 
-      transition: transform 0.3s ease, opacity 0.3s ease; 
+      right: 3px;
+      opacity: 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
     }
     &:hover {
       &::after {
@@ -132,7 +158,6 @@ section {
       }
     }
     > img {
-
       &:hover {
         cursor: pointer;
         filter: brightness(0) saturate(100%) invert(1);
