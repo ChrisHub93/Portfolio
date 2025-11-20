@@ -9,6 +9,9 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 736px) { 
+    display: none;
+  }
 }
 
 .menu {
@@ -63,7 +66,7 @@ nav {
     }
   }
   > .german_btn {
-    height: 32px;
+    height: 28px;
     width: 84px;
     background: none;
     border: unset;
