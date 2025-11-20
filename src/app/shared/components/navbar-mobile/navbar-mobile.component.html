@@ -1,0 +1,23 @@
+<nav>
+    <div class="logo-mobile">
+        <a href="#landing-page-scroll"></a>
+      </div>
+    <div class="menu">
+      @if(lang.languageEnglish()){
+      <button (click)="lang.setEnglish(false)" class="english_btn"></button>
+      }@else{
+      <button (click)="lang.setEnglish(true)" class="german_btn"></button>
+      }
+  
+      <a href="#about-me-scroll">{{
+        lang.languageEnglish() ? langTexts.en.about : langTexts.de.about
+      }}</a>
+      <a href="#skill-set-scroll">{{
+        lang.languageEnglish() ? langTexts.en.skills : langTexts.de.skills
+      }}</a>
+      <a href="#featured-projects-scroll">{{
+        lang.languageEnglish() ? langTexts.en.projects : langTexts.de.projects
+      }}</a>
+    </div>
+  
+  </nav>
