@@ -12,6 +12,8 @@ import { LanguageService } from '../../../language.service';
 export class NavbarMobileComponent {
 constructor(public lang: LanguageService) {}
 
+burgerMenuOpen = false;
+
   langTexts = {
     en: {
       about: 'About me',
@@ -24,4 +26,15 @@ constructor(public lang: LanguageService) {}
       projects: 'Projekte',
     },
   };
+
+
+  openMenu() {
+    this.burgerMenuOpen = true;
+    document.body.classList.add('no-scroll');
+  }
+
+  closeMenu() {
+    this.burgerMenuOpen = false;
+    document.body.classList.remove('no-scroll');
+  }
 }

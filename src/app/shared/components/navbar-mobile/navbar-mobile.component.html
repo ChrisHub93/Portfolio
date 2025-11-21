@@ -20,6 +20,30 @@
     }}</a>
   </div>
 
+  <div class="burger-menu">
+    <button (click)="openMenu()">
+      <img src="assets/icons/burger-menu.png" alt="" />
+    </button>
 
-
+    @if(burgerMenuOpen){
+    <div class="nav-menu-overlay" (click)="closeMenu()">
+      <div class="menu-content" (click)="$event.stopPropagation()">
+        <a href="#about-me-scroll" (click)="closeMenu()">{{
+          lang.languageEnglish() ? langTexts.en.about : langTexts.de.about
+        }}</a>
+        <a href="#skill-set-scroll" (click)="closeMenu()">{{
+          lang.languageEnglish() ? langTexts.en.skills : langTexts.de.skills
+        }}</a>
+        <a href="#featured-projects-scroll" (click)="closeMenu()">{{
+          lang.languageEnglish() ? langTexts.en.projects : langTexts.de.projects
+        }}</a>
+        @if(lang.languageEnglish()){
+        <button (click)="lang.setEnglish(false)" class="english_btn"></button>
+        }@else{
+        <button (click)="lang.setEnglish(true)" class="german_btn"></button>
+        }
+      </div>
+    </div>
+    }
+  </div>
 </nav>
