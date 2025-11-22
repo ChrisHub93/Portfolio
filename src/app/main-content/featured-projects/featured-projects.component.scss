@@ -7,6 +7,9 @@ section {
   flex-direction: column;
   padding: 102px 96px;
   gap: 20px;
+  @media (max-width: 730px) {
+    padding: 102px 32px;
+  }
 }
 
 .section-name {
@@ -20,18 +23,22 @@ section {
   font-size: 64px;
   font-weight: bold;
   letter-spacing: -6px;
+  @media (max-width: 635px) {
+    font-size: 56px;
+  }
 }
 
-.text-portfolio{
+.text-portfolio {
+  font-size: 18px;
   max-width: 370px;
+  @media (max-width: 635px) {
+    max-width: 100%;
+    font-size: 16px;
+  }
 }
 
 .project-box {
   display: flex;
-}
-
-.projects-container {
-  width: 65%;
 }
 
 .project-images-container {
@@ -39,6 +46,9 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (max-width: 990px) {
+    display: none;
+  }
 
   > img {
     height: 212px;
@@ -49,23 +59,35 @@ section {
 .project {
   display: flex;
   flex-direction: column;
+
   > .line {
     border: 1px solid $aqua;
     height: 1px;
     width: 100%;
   }
+
   > .project-info {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 40px 32px;
+    @media (max-width: 990px) {
+      padding: 32px 0;
+    }
+    @media (max-width: 593px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
     > div {
       display: flex;
       gap: 5px;
+
       > .project-name {
         font-size: 24px;
         font-weight: bold;
       }
+
       > .arrow_outward-icon {
         display: none;
       }
@@ -75,43 +97,37 @@ section {
       display: flex;
       gap: 5px;
       font-size: 18px;
+      flex-wrap: wrap;
       :nth-child(even) {
         color: $aqua;
       }
     }
   }
-  &:hover {
+  @media (max-width: 990px) {
     cursor: pointer;
-    background-color: rgb(61, 207, 182, 0.1);
     .arrow_outward-icon {
       display: block !important;
+    }
+  }
+  @media (min-width: 991px) {
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(61, 207, 182, 0.1);
+      .arrow_outward-icon {
+        display: block !important;
+      }
     }
   }
 }
 
 .projects-container {
+  width: 65%;
+  @media (max-width: 990px) {
+    width: 100%;
+  }
+
   > .project {
     position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: -90%;
-      right: -313px;
-      height: 320px;
-      width: 320px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      transition: transform 0.3s ease, opacity 0.3s ease;
-      opacity: 0;
-    }
-
-    &:hover::after {
-      opacity: 1;
-      transform: translateX(20px);
-    }
-    
     &.c01::after {
       background-image: url("./../../../assets/img/featured_projects/pokedex.png");
     }
@@ -123,6 +139,25 @@ section {
     }
     &.c04::after {
       background-image: url("./../../../assets/img/featured_projects/da_bubble.png");
+    }
+    @media (min-width: 991px) {
+      &::after {
+        content: "";
+        position: absolute;
+        top: -90%;
+        right: -313px;
+        height: 320px;
+        width: 320px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        opacity: 0;
+      }
+      &:hover::after {
+        opacity: 1;
+        transform: translateX(20px);
+      }
     }
   }
 }
