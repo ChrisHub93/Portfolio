@@ -12,6 +12,7 @@ section {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .centered {
@@ -22,6 +23,7 @@ section {
     font-size: 128px;
     font-weight: 700;
     letter-spacing: -8px;
+    text-align: center;
     @media (max-width: 990px) {
       font-size: 99px;
     }
@@ -48,6 +50,9 @@ section {
     @media (max-width: 990px) {
       gap: 32px;
     }
+    @media (max-width: 397px) {
+      gap: 12px;
+    }
   }
 }
 
@@ -61,6 +66,10 @@ section {
   align-items: center;
   gap: 10px;
   width: 32px;
+  @media (max-width: 635px) {
+    top: 72%;
+    left: 45px;
+  }
 
   > .left-arrow-box {
     position: relative;
@@ -96,6 +105,10 @@ section {
   align-items: center;
   gap: 12px;
   width: 32px;
+  @media (max-width: 635px) {
+    top: 72%;
+    right: 45px;
+  }
 
   > .mail-desktop {
     font-size: 18px;
@@ -184,6 +197,10 @@ section {
   overflow: hidden;
   display: flex;
   align-items: center;
+  @media (max-width: 635px) {
+    bottom: -47px;
+    left: 55px
+  }
 
   > div {
     display: flex;
