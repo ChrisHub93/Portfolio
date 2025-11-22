@@ -8,6 +8,9 @@ section {
   justify-content: center;
   align-items: center;
   padding: 0 96px;
+  @media (max-width: 730px) {
+    padding: 0 32px;
+  }
 }
 
 .info-board {
@@ -23,6 +26,18 @@ section {
   border-radius: 30px;
   padding: 32px 64px;
   height: 700px;
+  overflow-x: scroll;
+  @media (max-width: 1100px) {
+    height: 80%;
+  }
+  @media (max-width: 730px) {
+    padding: 16px 32px;
+  }
+  @media (max-width: 540px) {
+    height: 95%;
+    width: 100%;
+    padding: 8px 16px;
+  }
 }
 
 .button-close {
@@ -50,6 +65,11 @@ section {
   align-items: center;
   gap: 40px;
   height: 100%;
+  @media (max-width: 1100px) {
+    justify-content: center;
+    gap: 0;
+    flex-direction: column-reverse;
+  }
 }
 
 .left-side {
@@ -59,13 +79,23 @@ section {
   height: 100%;
   max-height: 538px;
   justify-content: space-between;
+  @media (max-width: 1100px) {
+    width: 100%;
+  }
   > .headlines {
     > h1 {
       font-size: 128px;
       font-weight: bold;
       color: $aqua;
       letter-spacing: -2px;
+      @media (max-width: 990px) {
+        font-size: 112px;
+      }
+      @media (max-width: 635px) {
+        font-size: 72px;
+      }
     }
+
     > h2 {
       margin-top: -8px;
       font-family: "Fira Code";
@@ -73,6 +103,12 @@ section {
       font-weight: bold;
       word-spacing: -24px;
       line-height: 90%;
+      @media (max-width: 990px) {
+        font-size: 54px;
+      }
+      @media (max-width: 635px) {
+        font-size: 56px;
+      }
     }
   }
 
@@ -82,15 +118,26 @@ section {
       font-size: 24px;
       font-weight: bold;
       color: $aqua;
+      @media (max-width: 635px) {
+        font-size: 20px;
+      }
     }
+
     > p {
       font-size: 18px;
+      @media (max-width: 635px) {
+        font-size: 16px;
+      }
     }
   }
 
   > .buttons {
     display: flex;
     gap: 30px;
+    @media (max-width: 540px) {
+      justify-content: center;
+    }
+
     > button {
       > img {
         color: $aqua;
@@ -101,23 +148,43 @@ section {
 
 .right-side {
   width: 50%;
+  @media (max-width: 1100px) {
+    width: auto;
+    height: 60%;
+  }
+  @media (max-width: 540px) {
+    height: 27%;
+  }
+
+  @media (max-width: 425px) {
+    height: 24%;
+  }
+
   > img {
     width: 100%;
-    height: fit-content;
+    height: 100%;
   }
 }
 
 .prject-skills {
   display: flex;
   align-items: center;
-  .skill {
+  flex-wrap: wrap;
+  gap: 10px;
+
+  > .skill {
     display: flex;
     align-items: center;
     gap: 3px;
     margin-right: 24px;
+
     > .skill-icon {
       height: 24px;
       width: 24px;
+      @media (max-width: 540px) {
+        height: 20px;
+        width: 20px;
+      }
     }
   }
 }
@@ -136,6 +203,7 @@ section {
   text-align: center;
   font-weight: 400;
   color: $aqua;
+
   > .arrow-next {
     transition: transform 0.2s ease;
   }
@@ -150,6 +218,7 @@ section {
 
 .placeholderButtons {
   height: 50px;
+
   > .in-progress {
     font-size: 30px;
   }
