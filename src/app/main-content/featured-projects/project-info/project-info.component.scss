@@ -203,9 +203,8 @@ section {
   text-align: center;
   font-weight: 400;
   color: $aqua;
-
-  > .arrow-next {
-    transition: transform 0.2s ease;
+  @media (max-width: 375px) {
+    margin-top: 31px;
   }
   &:hover {
     cursor: pointer;
@@ -213,6 +212,10 @@ section {
     .arrow-next {
       transform: translateX(6px) scale(1.1);
     }
+  }
+
+  > .arrow-next {
+    transition: transform 0.2s ease;
   }
 }
 
