@@ -6,6 +6,13 @@ section {
   display: flex;
   padding: 102px 96px;
   gap: 40px;
+  @media (max-width: 990px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  @media (max-width: 730px) {
+    padding: 51px 32px;
+  }
 }
 
 h2 {
@@ -19,6 +26,9 @@ h1 {
   font-size: 64px;
   font-weight: bold;
   color: $aqua;
+  @media (max-width: 635px) {
+    font-size: 56px;
+  }
 }
 
 h3 {
@@ -35,12 +45,25 @@ h3 {
   height: 100%;
   width: 50%;
   gap: 20px;
+  font-size: 18px;
+  @media (max-width: 990px) {
+    width: 100%;
+  }
+  @media (max-width: 635px) {
+    font-size: 16px;
+  }
+
   > div {
     display: flex;
     gap: 3px;
+
     > p {
       color: $aqua;
     }
+  }
+
+  > .lets-talk {
+    flex-wrap: wrap;
   }
 }
 
@@ -49,12 +72,23 @@ h3 {
   width: 50%;
   display: flex;
   flex-direction: column;
+  @media (max-width: 990px) {
+    width: 100%;
+  }
+
   > .input-box {
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 10px;
-    .input {
+
+    &:hover {
+      .line {
+        border: 1px solid white;
+      }
+    }
+
+    > .input {
       display: flex;
       flex-direction: column;
       gap: 10px;
@@ -70,21 +104,18 @@ h3 {
         color: white;
         font-size: 22px;
       }
+
       > .error-message {
         position: absolute;
         top: 112px;
         color: red;
       }
     }
+
     > .line {
       border: 1px solid $aqua;
       height: 1px;
       width: 100%;
-    }
-    &:hover {
-      .line {
-        border: 1px solid white;
-      }
     }
   }
 }
@@ -134,7 +165,7 @@ h3 {
   cursor: pointer;
   font-size: 22px;
   user-select: none;
-  
+
   &:hover {
     background-color: #3dcfb780;
   }
@@ -204,13 +235,13 @@ h3 {
   }
 }
 
-.placeholder-button{
+.placeholder-button {
   height: 50px;
   width: 50px;
   margin-top: 30px;
 }
 
-.success-message-overlay{
+.success-message-overlay {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.9);
