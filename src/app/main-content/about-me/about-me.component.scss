@@ -21,6 +21,7 @@ section {
 .image-container {
   position: relative;
   width: 50%;
+  height: 50%;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -30,9 +31,15 @@ section {
 
   > .profile {
     position: absolute;
+    border-radius: 30px;
     width: 100%;
+    height: 100%;
     transition: transform 0.5s ease;
     z-index: 2;
+    background-image: url("./../../../assets/img/profile.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 19%;
     @media (max-width: 990px) {
       height: 100%;
     }
