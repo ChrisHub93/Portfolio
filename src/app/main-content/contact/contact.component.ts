@@ -99,6 +99,7 @@ export class ContactComponent {
         .subscribe({
           next: (response) => {
             ngForm.resetForm();
+            this.showSuccesMessage();
           },
           error: (error) => {
             console.error(error);
