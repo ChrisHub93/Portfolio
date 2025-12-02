@@ -197,9 +197,10 @@ section {
   overflow: hidden;
   display: flex;
   align-items: center;
+  
   @media (max-width: 635px) {
     bottom: -47px;
-    left: 55px;
+
   }
 
   > div {
@@ -239,16 +240,34 @@ section {
 
 .carousel {
   position: absolute;
-  bottom: -110px;
-  right: -6%;
+  bottom: -73px;
+  left: 3%;
   width: 105%;
   height: 62px;
   transform: translateY(-65px) translateX(-65px) rotate(-5deg);
   background-color: rgba(56, 56, 56, 0.886);
   margin: 100px auto;
-
   display: flex;
   overflow: auto;
+  &:hover {
+    > .group {
+      cursor: default;
+      animation-play-state: paused;
+    }
+  }
+  @media (max-width: 990px) { 
+    left: 5%;
+  }
+  @media (max-width: 730px) { 
+    left: 0%;
+    width: 124%;
+  }
+  @media (max-width: 635px) { 
+    height: 36px;
+    bottom: -140px;
+  }
+
+ 
   ::-webkit-scrollbar {
     display: none;
   }
@@ -257,22 +276,22 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1em;
+    //gap: 1em;
     animation: spin 10s infinite linear;
-    padding-right: 1em; // <- muss so groß sein, wie padding card
-    &:hover {
-      cursor: default;
-      animation-play-state: paused;
-    }
+    //padding-right: 1px; // <- muss so groß sein, wie padding card
 
     > .card {
       flex: 0 0 310px;
       height: 100%;
-      padding: 0 1em;
+      //padding: 0 1px;
       font-size: 24px;
       text-align: center;
       align-content: center;
       color: $aqua;
+      @media (max-width: 635px) { 
+        font-size: 16px;
+        flex: 0 0 200px;
+      }
     }
   }
 }
