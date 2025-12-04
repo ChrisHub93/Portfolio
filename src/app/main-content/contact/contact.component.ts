@@ -3,11 +3,12 @@ import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { SuccessMessageComponent } from './success-message/success-message.component';
 import { LanguageService } from '../../language.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, SuccessMessageComponent],
+  imports: [FormsModule, SuccessMessageComponent,RouterModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
