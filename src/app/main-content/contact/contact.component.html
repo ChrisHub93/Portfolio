@@ -55,6 +55,7 @@
               : langTexts.de.placeholderName
           "
           name="name"
+          pattern=".*\S.*"
           required
         />@if (!name.valid && name.touched && !name.disabled) {
         <span class="error-message">{{
@@ -87,7 +88,7 @@
               : langTexts.de.placeholderEmail
           "
           name="email"
-          pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+          pattern="^[a-zA-Z0-9](?:[a-zA-Z0-9._%+-]*[a-zA-Z0-9])?@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*\.[A-Za-z]{2,}$"
           required
         />
         @if (!email.valid && email.touched && !email.disabled) {
@@ -122,6 +123,7 @@
           "
           name="message"
           minlength="4"
+          pattern=".*\S.*"
           required
         />
         @if (!message.valid && message.touched && !message.disabled) {
@@ -156,7 +158,7 @@
               : langTexts.de.textCheckboxOne
           }}
         </span>
-        <a routerLink="/legal-notice" href='/legal-notice'>
+        <a routerLink="/legal-notice" href="/legal-notice">
           {{
             lang.languageEnglish()
               ? langTexts.en.textCheckboxButton
