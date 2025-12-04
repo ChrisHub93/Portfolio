@@ -186,58 +186,6 @@ section {
   }
 }
 
-.marquee {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 105%;
-  height: 62px;
-  transform: translateY(-65px) translateX(-65px) rotate(-5deg);
-  background-color: rgba(56, 56, 56, 0.886);
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  
-  @media (max-width: 635px) {
-    bottom: -47px;
-
-  }
-
-  > div {
-    display: flex;
-    gap: 70px;
-    white-space: nowrap;
-    animation: marquee 15s linear infinite;
-    &:hover {
-      cursor: default;
-      animation-play-state: paused;
-    }
-  }
-
-  span {
-    font-size: 32px;
-    color: $aqua;
-  }
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-@keyframes arrow-movement {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(10px);
-  }
-}
-
 .carousel {
   position: absolute;
   bottom: -73px;
@@ -255,19 +203,17 @@ section {
       animation-play-state: paused;
     }
   }
-  @media (max-width: 990px) { 
+  @media (max-width: 990px) {
     left: 5%;
   }
-  @media (max-width: 730px) { 
+  @media (max-width: 730px) {
     left: 0%;
     width: 124%;
   }
-  @media (max-width: 635px) { 
+  @media (max-width: 635px) {
     height: 36px;
     bottom: -140px;
   }
-
- 
   ::-webkit-scrollbar {
     display: none;
   }
@@ -276,23 +222,29 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    //gap: 1em;
     animation: spin 10s infinite linear;
-    //padding-right: 1px; // <- muss so groß sein, wie padding card
 
     > .card {
       flex: 0 0 310px;
       height: 100%;
-      //padding: 0 1px;
       font-size: 24px;
       text-align: center;
       align-content: center;
       color: $aqua;
-      @media (max-width: 635px) { 
+      @media (max-width: 635px) {
         font-size: 16px;
         flex: 0 0 200px;
       }
     }
+  }
+}
+
+@keyframes arrow-movement {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
   }
 }
 
