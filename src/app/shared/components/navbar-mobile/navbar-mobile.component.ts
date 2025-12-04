@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { LanguageService } from '../../../language.service';
+import { RouterModule } from '@angular/router';
 
 
 @Component({
   selector: 'app-navbar-mobile',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './navbar-mobile.component.html',
   styleUrl: './navbar-mobile.component.scss'
 })
