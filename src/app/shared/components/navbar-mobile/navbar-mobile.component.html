@@ -9,7 +9,7 @@
     <button (click)="lang.setEnglish(true)" class="german_btn"></button>
     }
 
-    <a href="#about-me-scroll">{{
+    <a href="#about-me-scroll-mobile">{{
       lang.languageEnglish() ? langTexts.en.about : langTexts.de.about
     }}</a>
     <a href="#skill-set-scroll">{{
@@ -28,7 +28,7 @@
     @if(burgerMenuOpen){
     <div class="nav-menu-overlay" (click)="closeMenu()">
       <div class="menu-content" (click)="$event.stopPropagation()">
-        <a href="#about-me-scroll" (click)="closeMenu()">{{
+        <a href="#about-me-scroll-mobile" (click)="closeMenu()">{{
           lang.languageEnglish() ? langTexts.en.about : langTexts.de.about
         }}</a>
         <a href="#skill-set-scroll" (click)="closeMenu()">{{
