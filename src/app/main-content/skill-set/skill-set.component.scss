@@ -26,7 +26,7 @@ section {
   }
   @media (max-width: 635px) {
     padding: 56px 8px;
-   }
+  }
 }
 
 .skill-set-container {
@@ -96,6 +96,9 @@ section {
     justify-content: center;
     align-items: center;
     width: 68px;
+    @media (max-width: 320px) {
+      width: 58px;
+    }
     &:hover {
       cursor: default;
       scale: 1.08;
