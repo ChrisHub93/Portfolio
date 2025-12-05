@@ -4,6 +4,7 @@
   scroll-behavior: smooth;
   font-family: "Karla";
   color: #d9d9d9;
+
 }
 
 body {
@@ -73,6 +74,9 @@ a {
   border: 1px solid $aqua;
   border-radius: 30px;
   padding: 32px;
+  @media (max-width: 635px) {
+    padding: 8px;
+   }
 }
 
 .logo {

@@ -28,6 +28,7 @@ section {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  max-width: 95%;
   @media (max-width: 990px) {
     width: fit-content;
   }

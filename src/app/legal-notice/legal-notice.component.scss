@@ -20,6 +20,9 @@ section {
   @media (max-width: 730px) {
     padding: 102px 56px;
   }
+  @media (max-width: 635px) {
+    padding: 56px 8px;
+  }
 }
 
 h1 {
@@ -30,6 +33,9 @@ h1 {
   margin-bottom: 64px;
   @media (max-width: 635px) {
     font-size: 56px;
+  }
+  @media (max-width: 320px) {
+    font-size: 44px;
   }
 }
 

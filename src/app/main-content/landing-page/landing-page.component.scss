@@ -60,6 +60,9 @@ section {
     @media (max-width: 397px) {
       gap: 12px;
     }
+    @media (max-width: 320px) {
+      padding: 0 8px;
+    }
   }
 }
 
@@ -203,7 +206,7 @@ section {
   background-color: rgba(56, 56, 56, 0.886);
   margin: 100px auto;
   display: flex;
-  overflow: auto;
+  overflow: hidden;
   &:hover {
     > .group {
       cursor: default;

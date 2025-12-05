@@ -12,7 +12,7 @@ section {
   gap: 48px;
   @media (max-width: 635px) {
     padding: 56px 0;
-   }
+  }
 }
 
 .vignette {
@@ -191,4 +191,17 @@ h1 {
   .comment-section {
     gap: 20px;
   }
+}
+
+@media (max-width: 635px) {
+  .text-frame {
+    padding: 32px;
+    font-size: 16px;
+  } 
+}
+
+@media (max-width: 320px) {
+  .text-frame {
+    padding: 8px;
+  } 
 }

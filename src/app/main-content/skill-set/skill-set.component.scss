@@ -85,7 +85,7 @@ section {
   align-items: flex-start;
   @media (max-width: 990px) {
     justify-content: center;
-    width: 100%;
+    width: 98%;
     gap: 40px;
   }
 
@@ -149,6 +149,9 @@ section {
   &:hover::after {
     opacity: 1;
     transform: translateX(-50%) translateY(-12px);
+    @media (max-width: 397px) {
+      transform: translateX(-60%) translateY(-12px);
+    }
   }
 
   /* Arrow */
