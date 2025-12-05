@@ -10,6 +10,9 @@ section {
   align-items: center;
   padding: 102px 0;
   gap: 48px;
+  @media (max-width: 635px) {
+    padding: 56px 0;
+   }
 }
 
 .vignette {

@@ -11,8 +11,11 @@ section {
     align-items: center;
   }
   @media (max-width: 730px) {
-    padding: 51px 32px;
+    padding: 56px 32px;
   }
+  @media (max-width: 635px) {
+    padding: 56px 8px;
+   }
 }
 
 h2 {
