@@ -18,17 +18,19 @@ section {
   }
   @media (max-width: 635px) {
     padding: 56px 8px;
-   }
+  }
 }
 
 .image-container {
   position: relative;
-  width: 50%;
-  height: 50%;
+  width: 565px;
+  height: 568px;
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
   max-width: 95%;
+  @media (max-width: 990px) {
+    width: fit-content;
+    height: 50%;
+  }
   @media (max-width: 990px) {
     width: fit-content;
   }
@@ -60,6 +62,7 @@ section {
   }
 
   > .profile-background {
+    border-radius: 30px;
     width: 100%;
     @media (max-width: 990px) {
       height: 100%;
