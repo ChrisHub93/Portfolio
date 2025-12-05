@@ -1,11 +1,23 @@
 @import "./../../styles.scss";
+
+@media (min-width: 1921px) {
+  app-navbar ::ng-deep nav {
+    position: relative;
+  }
+}
+
+body {
+  background-color: $backgroundDark;
+}
+
 section {
   background-color: $backgroundDark;
   width: 100%;
   display: flex;
+  justify-self: center;
   padding: 102px 96px;
   flex-direction: column;
-  @media (max-width: 730px) { 
+  @media (max-width: 730px) {
     padding: 102px 56px;
   }
 }
@@ -16,9 +28,14 @@ h1 {
   color: $aqua;
   margin-top: 64px;
   margin-bottom: 64px;
-  @media (max-width: 635px) { 
+  @media (max-width: 635px) {
     font-size: 56px;
   }
+}
+
+.background {
+  width: 100%;
+  background-color: $backgroundDark;
 }
 
 .imprint {
@@ -34,12 +51,12 @@ h1 {
     color: $aqua;
     @media (max-width: 635px) {
       font-size: 16px;
-     }
+    }
   }
   div {
     > h2 {
       font-size: 18px;
-      @media (max-width: 635px) { 
+      @media (max-width: 635px) {
         font-size: 16px;
       }
     }

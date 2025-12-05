@@ -23,6 +23,7 @@ section {
     font-size: 128px;
     font-weight: 700;
     letter-spacing: -8px;
+
     text-align: center;
     @media (max-width: 990px) {
       font-size: 99px;
@@ -30,6 +31,12 @@ section {
     @media (max-width: 730px) {
       font-size: 62px;
       letter-spacing: -4px;
+    }
+    @media (max-width: 437px) {
+      padding-right: 10px;
+    }
+    @media (max-width: 414px) {
+      padding-right: 0;
     }
   }
   h2 {

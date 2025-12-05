@@ -1,59 +1,150 @@
-<section>
-  <app-navbar></app-navbar>
-  <app-navbar-mobile></app-navbar-mobile>
-  <h1 class="fontFira-code">
-    {{ lang.languageEnglish() ? langTexts.en.headline : langTexts.de.headline }}
-  </h1>
-
-  <div class="legal-notice-container">
-    <h2 class="imprint">
+<div class="background">
+  <section>
+    <div class="navbar-componet">
+      <app-navbar></app-navbar>
+      <app-navbar-mobile></app-navbar-mobile>
+    </div>
+    <h1 class="fontFira-code">
       {{
-        lang.languageEnglish() ? langTexts.en.imprintTitle : langTexts.de.imprintTitle
+        lang.languageEnglish() ? langTexts.en.headline : langTexts.de.headline
       }}
-    </h2>
-    <div>
-      <p>· Christian Rene Müller</p>
-      <p>· Manheimer Ring 32</p>
-      <p>· 50171 Kerpen</p>
-    </div>
+    </h1>
 
-    <div>
-      <h2>{{ lang.languageEnglish() ? langTexts.en.boardTitle : langTexts.de.boardTitle }}</h2>
-      <p>Email: christianmueller8&#64;gmx.net</p>
-    </div>
+    <div class="legal-notice-container">
+      <h2 class="imprint">
+        {{
+          lang.languageEnglish()
+            ? langTexts.en.imprintTitle
+            : langTexts.de.imprintTitle
+        }}
+      </h2>
+      <div>
+        <p>· Christian Rene Müller</p>
+        <p>· Manheimer Ring 32</p>
+        <p>· 50171 Kerpen</p>
+      </div>
 
-    <div>
-      <h2>{{ lang.languageEnglish() ? langTexts.en.termsTitle : langTexts.de.termsTitle }}</h2>
-      <p [innerHTML]="lang.languageEnglish() ? langTexts.en.termsTexts : langTexts.de.termsTexts"></p>
-    </div>
+      <div>
+        <h2>
+          {{
+            lang.languageEnglish()
+              ? langTexts.en.boardTitle
+              : langTexts.de.boardTitle
+          }}
+        </h2>
+        <p>Email: christianmueller8&#64;gmx.net</p>
+      </div>
 
-    <div>
-      <h2>{{ lang.languageEnglish() ? langTexts.en.scopeTitle : langTexts.de.scopeTitle }}</h2>
-      <p [innerHTML]="lang.languageEnglish() ? langTexts.en.scopeText : langTexts.de.scopeText"></p>
-    </div>
+      <div>
+        <h2>
+          {{
+            lang.languageEnglish()
+              ? langTexts.en.termsTitle
+              : langTexts.de.termsTitle
+          }}
+        </h2>
+        <p
+          [innerHTML]="
+            lang.languageEnglish()
+              ? langTexts.en.termsTexts
+              : langTexts.de.termsTexts
+          "
+        ></p>
+      </div>
 
-    <div>
-      <h2>{{ lang.languageEnglish() ? langTexts.en.proprietaryTitle : langTexts.de.proprietaryTitle }}</h2>
-      <p [innerHTML]="lang.languageEnglish() ? langTexts.en.proprietaryText : langTexts.de.proprietaryText"></p>
-    </div>
-    <div>
-      <h2>{{ lang.languageEnglish() ? langTexts.en.useTitle : langTexts.de.useTitle }}</h2>
-      <p [innerHTML]="lang.languageEnglish() ? langTexts.en.useText : langTexts.de.useText"></p>
-    </div>
+      <div>
+        <h2>
+          {{
+            lang.languageEnglish()
+              ? langTexts.en.scopeTitle
+              : langTexts.de.scopeTitle
+          }}
+        </h2>
+        <p
+          [innerHTML]="
+            lang.languageEnglish()
+              ? langTexts.en.scopeText
+              : langTexts.de.scopeText
+          "
+        ></p>
+      </div>
 
-    <div>
-      <h2>{{ lang.languageEnglish() ? langTexts.en.disclaimerTitle : langTexts.de.disclaimerTitle }}</h2>
-      <p [innerHTML]="lang.languageEnglish() ? langTexts.en.disclaimerText : langTexts.de.disclaimerText"></p>
-    </div>
+      <div>
+        <h2>
+          {{
+            lang.languageEnglish()
+              ? langTexts.en.proprietaryTitle
+              : langTexts.de.proprietaryTitle
+          }}
+        </h2>
+        <p
+          [innerHTML]="
+            lang.languageEnglish()
+              ? langTexts.en.proprietaryText
+              : langTexts.de.proprietaryText
+          "
+        ></p>
+      </div>
+      <div>
+        <h2>
+          {{
+            lang.languageEnglish()
+              ? langTexts.en.useTitle
+              : langTexts.de.useTitle
+          }}
+        </h2>
+        <p
+          [innerHTML]="
+            lang.languageEnglish() ? langTexts.en.useText : langTexts.de.useText
+          "
+        ></p>
+      </div>
 
-    <div>
-      <h2>{{ lang.languageEnglish() ? langTexts.en.indemnityTitle : langTexts.de.indemnityTitle }}</h2>
-      <p [innerHTML]="lang.languageEnglish() ? langTexts.en.indemnityText : langTexts.de.indemnityText"></p>
-    </div>
-    <p [innerHTML]="lang.languageEnglish() ? langTexts.en.questionText : langTexts.de.questionText">
+      <div>
+        <h2>
+          {{
+            lang.languageEnglish()
+              ? langTexts.en.disclaimerTitle
+              : langTexts.de.disclaimerTitle
+          }}
+        </h2>
+        <p
+          [innerHTML]="
+            lang.languageEnglish()
+              ? langTexts.en.disclaimerText
+              : langTexts.de.disclaimerText
+          "
+        ></p>
+      </div>
 
-      
-    </p>
-    <p [innerHTML]="lang.languageEnglish() ? langTexts.en.dateText : langTexts.de.dateText"></p>
-  </div>
-</section>
+      <div>
+        <h2>
+          {{
+            lang.languageEnglish()
+              ? langTexts.en.indemnityTitle
+              : langTexts.de.indemnityTitle
+          }}
+        </h2>
+        <p
+          [innerHTML]="
+            lang.languageEnglish()
+              ? langTexts.en.indemnityText
+              : langTexts.de.indemnityText
+          "
+        ></p>
+      </div>
+      <p
+        [innerHTML]="
+          lang.languageEnglish()
+            ? langTexts.en.questionText
+            : langTexts.de.questionText
+        "
+      ></p>
+      <p
+        [innerHTML]="
+          lang.languageEnglish() ? langTexts.en.dateText : langTexts.de.dateText
+        "
+      ></p>
+    </div>
+  </section>
+</div>
