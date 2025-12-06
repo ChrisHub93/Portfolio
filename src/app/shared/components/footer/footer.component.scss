@@ -63,19 +63,22 @@ section {
   flex-direction: column;
   gap: 8px;
   position: relative;
-  &:hover {
-    color: $aqua;
-    &::after {
-      opacity: 1;
-      transform: translateY(-50%) translateX(-120px);
-    }
-  }
 
-  > a {
+  a {
     position: relative;
     color: white;
     text-decoration: none;
     transition: color 0.3s ease;
+
+    &:hover {
+      color: $aqua;
+
+      &::after {
+        opacity: 1;
+        transform: translateY(-50%) translateX(-120px);
+      }
+    }
+
     &::after {
       content: "";
       position: absolute;
