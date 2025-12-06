@@ -83,7 +83,7 @@ export class ContactComponent {
   mailTest = false;
 
   post = {
-    endPoint: 'https://christian-mueller.developerakademie.net/angular-projects/Portfolio/sendMail.php',
+    endPoint: 'http://xn--christian-mller-portfolio-pwc.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
