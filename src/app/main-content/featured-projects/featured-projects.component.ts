@@ -71,25 +71,6 @@ export class FeaturedProjectsComponent {
       },
       inProgress: false,
     },
-
-    {
-      id: '04',
-      name: 'DA Bubble',
-      skills: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
-      descriptionEN: `This App is a Slack Clone App. It revolutionizes team 
-        communication and collaboration with its intuitive interface, real-time messaging, 
-        and robust channel organization.`,
-      challangeEN: '',
-      descriptionDE: `Diese App ist ein Slack-Clone. Sie revolutioniert die Teamkommunikation 
-        und Zusammenarbeit durch eine intuitive Benutzeroberfläche, Echtzeit-Nachrichten und eine 
-        robuste Kanalorganisation.`,
-      challangeDE: '',
-      links: {
-        gitHub: '',
-        liveTest: '',
-      },
-      inProgress: true,
-    },
   ];
 
   langTexts = {
