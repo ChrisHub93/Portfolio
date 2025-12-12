@@ -14,7 +14,6 @@ section {
   background-color: $backgroundDark;
   width: 100%;
   display: flex;
-  justify-self: center;
   padding: 102px 96px;
   flex-direction: column;
   @media (max-width: 768px) {
@@ -41,7 +40,12 @@ h1 {
 
 .background {
   width: 100%;
+  display: flex;
+  justify-content: center;
   background-color: $backgroundDark;
+  @media (min-height: 1428px){
+    height: calc(100vh - 204px);
+  }
 }
 
 .imprint {
