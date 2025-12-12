@@ -1,7 +1,16 @@
 @import "./../../styles.scss";
 
-.max-content{
-    display: flex;
-    justify-content: center;
-    background-color: $backgroundDark;
+.max-content {
+  display: flex;
+  justify-content: center;
+  background-color: $backgroundDark;
+}
+
+.background-landing-page {
+  display: flex;
+  justify-content: center;
+  background-image: url("./../../assets/img/landing-page-background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
