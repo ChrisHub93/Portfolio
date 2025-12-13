@@ -81,14 +81,14 @@
         <input
           #email="ngModel"
           [(ngModel)]="contactData.email"
-          type="text"
+          type="email"
           [placeholder]="
             lang.languageEnglish()
               ? langTexts.en.placeholderEmail
               : langTexts.de.placeholderEmail
           "
           name="email"
-          pattern="^[a-zA-Z0-9](?:[a-zA-Z0-9._%+-]*[a-zA-Z0-9])?@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*\.[A-Za-z]{2,}$"
+          pattern="^[a-zA-Z0-9]+([._%+\-][a-zA-Z0-9]+)*@([a-zA-Z0-9]+([\.\-][a-zA-Z0-9]+)*)\.[a-zA-Z]{2,}$"
           required
         />
         @if (!email.valid && email.touched && !email.disabled) {

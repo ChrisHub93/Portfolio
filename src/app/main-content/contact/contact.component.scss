@@ -120,7 +120,7 @@ h3 {
       > .error-message {
         position: absolute;
         bottom: 7px;
-        color: red;
+        color: $errorColor;
       }
     }
 
@@ -171,7 +171,7 @@ h3 {
   > .error-message {
     position: absolute;
     bottom: -19px;
-    color: red;
+    color: $errorColor;
   }
 }
 
