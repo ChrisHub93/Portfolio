@@ -46,7 +46,7 @@ export class FeaturedProjectsComponent {
        Durch die enge Zusammenarbeit mit zwei weiteren Entwicklern konnte ich zudem viel neues lernen.`,
       links: {
         gitHub: 'https://github.com/ChrisHub93/Join-Gruppenprojekt',
-        liveTest: 'https://join-464.developerakademie.net/index.html',
+        liveTest: 'https://christian-mueller.developerakademie.net/Join/',
       },
       inProgress: false,
     },
