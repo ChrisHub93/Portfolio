@@ -1,6 +1,7 @@
 @import "./../../../styles.scss";
 
 section {
+  overflow-x: clip;
   background: $aqua;
   background-image: linear-gradient(
       90deg,
@@ -191,10 +192,12 @@ section {
 @keyframes appear-right {
   from {
     transform: translateX(100%);
+    scale: 0.5;
   }
   to {
     transform: translateX(0);
     opacity: 1;
+    scale: 1;
   }
 }
 
