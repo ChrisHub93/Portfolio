@@ -6,17 +6,17 @@
     <button (click)="lang.setEnglish(true)" class="german_btn"></button>
     }
 
-    <a href="#about-me-scroll">{{
+    <a [routerLink]="['/']" fragment="about-me-scroll">{{
       lang.languageEnglish() ? langTexts.en.about : langTexts.de.about
     }}</a>
-    <a href="#skill-set-scroll">{{
+    <a [routerLink]="['/']" fragment="skill-set-scroll" >{{
       lang.languageEnglish() ? langTexts.en.skills : langTexts.de.skills
     }}</a>
-    <a href="#featured-projects-scroll">{{
+    <a [routerLink]="['/']" fragment="featured-projects-scroll">{{
       lang.languageEnglish() ? langTexts.en.projects : langTexts.de.projects
     }}</a>
   </div>
   <div class="logo">
-    <a routerLink="" href="#landing-page-scroll"></a>
+    <a [routerLink]="['/']"></a>
   </div>
 </nav>

@@ -1,6 +1,6 @@
 <nav>
   <div class="logo-mobile">
-    <a routerLink="" href="#landing-page-scroll"></a>
+    <a [routerLink]="['/']"></a>
   </div>
   <div class="menu">
     @if(lang.languageEnglish()){
@@ -9,13 +9,13 @@
     <button (click)="lang.setEnglish(true)" class="german_btn"></button>
     }
 
-    <a href="#about-me-scroll-mobile">{{
+    <a [routerLink]="['/']" fragment="about-me-scroll-mobile">{{
       lang.languageEnglish() ? langTexts.en.about : langTexts.de.about
     }}</a>
-    <a href="#skill-set-scroll">{{
+    <a [routerLink]="['/']" fragment="skill-set-scroll" >{{
       lang.languageEnglish() ? langTexts.en.skills : langTexts.de.skills
     }}</a>
-    <a href="#featured-projects-scroll">{{
+    <a [routerLink]="['/']" fragment="featured-projects-scroll">{{
       lang.languageEnglish() ? langTexts.en.projects : langTexts.de.projects
     }}</a>
   </div>
@@ -28,13 +28,13 @@
     @if(burgerMenuOpen){
     <div class="nav-menu-overlay" (click)="closeMenu()">
       <div class="menu-content" (click)="$event.stopPropagation()">
-        <a href="#about-me-scroll-mobile" (click)="closeMenu()">{{
+        <a [routerLink]="['/']" fragment="about-me-scroll-mobile" (click)="closeMenu()">{{
           lang.languageEnglish() ? langTexts.en.about : langTexts.de.about
         }}</a>
-        <a href="#skill-set-scroll" (click)="closeMenu()">{{
+        <a [routerLink]="['/']" fragment="skill-set-scroll" (click)="closeMenu()">{{
           lang.languageEnglish() ? langTexts.en.skills : langTexts.de.skills
         }}</a>
-        <a href="#featured-projects-scroll" (click)="closeMenu()">{{
+        <a [routerLink]="['/']" fragment="featured-projects-scroll" (click)="closeMenu()">{{
           lang.languageEnglish() ? langTexts.en.projects : langTexts.de.projects
         }}</a>
         @if(lang.languageEnglish()){
