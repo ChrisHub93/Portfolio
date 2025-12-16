@@ -2,16 +2,6 @@
 
 section {
   overflow-x: clip;
-  background: $aqua;
-  background-image: linear-gradient(
-      90deg,
-      rgba(61, 207, 182, 0%) -52%,
-      rgba(28, 28, 28, 1) 18%
-    ),
-    url("./../../../assets/img/skill-set-background.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   width: 100%;
   display: flex;
   padding: 56px 96px;
