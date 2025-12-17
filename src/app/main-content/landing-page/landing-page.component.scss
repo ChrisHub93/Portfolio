@@ -203,12 +203,8 @@ section {
   margin: 100px auto;
   display: flex;
   overflow: hidden;
-  &:hover {
-    > .group {
-      cursor: default;
-      animation-play-state: paused;
-    }
-  }
+  align-items: center;
+
   @media (max-width: 990px) {
     left: 5%;
   }
@@ -220,28 +216,50 @@ section {
     height: 36px;
     bottom: -140px;
   }
-  ::-webkit-scrollbar {
-    display: none;
+
+  .carousel-inner {
+    display: flex;
+    width: max-content;
+    height: 100%;
+    animation: scroll 15s linear infinite;
+    will-change: transform;
+
+    &:hover {
+      animation-play-state: paused;
+    }
   }
 
-  > .group {
+  .group {
+    display: flex; 
+    flex-shrink: 0;
+    align-items: center;
+    white-space: nowrap;
+    min-width: max-content; 
+  }
+
+  .card {
+    width: 310px;
+    flex-shrink: 0; 
+    height: 100%;
+    font-size: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: spin 10s infinite linear;
+    color: $aqua; 
 
-    > .card {
-      flex: 0 0 310px;
-      height: 100%;
-      font-size: 24px;
-      text-align: center;
-      align-content: center;
-      color: $aqua;
-      @media (max-width: 635px) {
-        font-size: 16px;
-        flex: 0 0 200px;
-      }
+    @media (max-width: 635px) {
+      font-size: 16px;
+      width: 200px;
     }
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
 
@@ -254,11 +272,3 @@ section {
   }
 }
 
-@keyframes spin {
-  from {
-    translate: 0;
-  }
-  to {
-    translate: -100%;
-  }
-}
