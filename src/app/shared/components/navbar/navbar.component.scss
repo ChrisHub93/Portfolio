@@ -15,6 +15,39 @@ nav {
 }
 
 .menu {
+  display: flex;
+  align-items: center;
+
+  > .english_btn {
+    height: 28px;
+    width: 84px;
+    background: none;
+    border: unset;
+    background-image: url("./../../../../assets/icons/nav_button/english.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &:hover {
+      cursor: pointer;
+      background-image: url("./../../../../assets/icons/nav_button/english_hover.png");
+    }
+  }
+
+  > .german_btn {
+    height: 28px;
+    width: 84px;
+    background: none;
+    border: unset;
+    background-image: url("./../../../../assets/icons/nav_button/german.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+     &:hover {
+      cursor: pointer;
+      background-image: url("./../../../../assets/icons/nav_button/german_hover.png");
+    }
+  }
+
   a {
     margin-left: 15px;
     font-family: "Fira Code";
@@ -23,7 +56,6 @@ nav {
     font-weight: lighter;
     position: relative;
     word-spacing: -4px;
-
     &::after {
       position: absolute;
       content: "";
@@ -39,44 +71,10 @@ nav {
     }
     &:hover {
       color: $aqua;
-
       &::after {
         opacity: 1;
         transform: translateY(16px);
       }
-    }
-  }
-}
-
-.menu {
-  display: flex;
-  align-items: center;
-  > .english_btn {
-    height: 28px;
-    width: 84px;
-    background: none;
-    border: unset;
-    background-image: url("./../../../../assets/icons/nav_button/english.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    &:hover {
-      cursor: pointer;
-      background-image: url("./../../../../assets/icons/nav_button/english_hover.png");
-    }
-  }
-  > .german_btn {
-    height: 28px;
-    width: 84px;
-    background: none;
-    border: unset;
-    background-image: url("./../../../../assets/icons/nav_button/german.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    å &:hover {
-      cursor: pointer;
-      background-image: url("./../../../../assets/icons/nav_button/german_hover.png");
     }
   }
 }
